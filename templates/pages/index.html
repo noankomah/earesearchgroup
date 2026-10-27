@@ -1,0 +1,249 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% editable 'index-text-001' %}</title>
+
+  <meta name="description" content="{% editable 'index-meta-description' %}" />
+
+  <link rel="stylesheet" href="/static/assets/css/index.css?v=4">
+
+  <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".nav-dropdown");
+
+    dropdowns.forEach(function (dropdown) {
+      const parent = dropdown.querySelector(".nav-parent");
+
+      if (!parent) return;
+
+      parent.addEventListener("click", function (event) {
+        if (window.innerWidth > 1024) return;
+
+        event.preventDefault();
+
+        dropdowns.forEach(function (otherDropdown) {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove("is-open");
+          }
+        });
+
+        dropdown.classList.toggle("is-open");
+      });
+    });
+  });
+</script>
+
+<body>
+  <!-- HEADER -->
+  {% include "includes/navbar.html" %}
+
+  <main>
+    <!-- FULL-WIDTH HERO SLIDER:
+         The slides are built from assets/images/hero_images/images.json by
+         assets/js/index.js. The first slide (index 0) is the EA logo image
+         and is the active/opening slide on page load. -->
+    <section class="hero-slider" aria-label="EA Research Group highlights">
+      <div class="slide-stage" id="heroSlider"></div>
+
+      <div class="hero-fixed-overlay">
+        <div class="container slide-content">
+
+          <div class="hero-actions">
+          </div>
+        </div>
+      </div>
+
+      <button class="slider-btn slider-btn-left" id="prevSlide" aria-label="Previous slide">{% editable 'index-text-002' %}</button>
+      <button class="slider-btn slider-btn-right" id="nextSlide" aria-label="Next slide">{% editable 'index-text-003' %}</button>
+
+      <div class="slider-dots" id="sliderDots" aria-label="Slider navigation"></div>
+    </section>
+
+
+    <!-- WHO WE ARE -->
+    <section class="who-section">
+      <div class="container who-grid">
+
+        <div class="who-content">
+          <h1 class="eyebrow">{% editable 'index-text-004' %}</h1>
+
+          <p class="who-lead">
+            {% editable 'index-text-005' %}
+          </p>
+
+          <p>
+            {% editable 'index-text-006' %}
+          </p>
+
+          <div class="who-actions">
+            <a href="{% editable 'index-link-007' %}" class="btn btn-primary">{% editable 'index-text-008' %}</a>
+            <a href="{% editable 'index-link-009' %}" class="btn btn-secondary">{% editable 'index-text-010' %}</a>
+          </div>
+        </div>
+
+        <div class="who-panel">
+          <div class="who-panel-header">
+            <span>{% editable 'index-text-011' %}</span>
+
+          </div>
+
+          <div class="who-mini-grid">
+            <div class="who-mini-card">
+              <strong>{% editable 'index-text-012' %}</strong>
+              <p>{% editable 'index-text-013' %}</p>
+            </div>
+
+            <div class="who-mini-card">
+              <strong>{% editable 'index-text-014' %}</strong>
+              <p>{% editable 'index-text-015' %}</p>
+            </div>
+
+            <div class="who-mini-card">
+              <strong>{% editable 'index-text-016' %}</strong>
+              <p>{% editable 'index-text-017' %}</p>
+            </div>
+
+            <div class="who-mini-card">
+              <strong>{% editable 'index-text-018' %}</strong>
+              <p>{% editable 'index-text-019' %}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section muted">
+      <div class="container">
+        <div class="section-heading">
+          <h1 class="eyebrow">{% editable 'index-text-020' %}</h1>
+          <h2>{% editable 'index-text-021' %}</h2>
+        </div>
+
+        <div class="card-grid four">
+          <article class="info-card">
+            <span class="icon">{% editable 'index-text-022' %}</span>
+            <h3>{% editable 'index-text-023' %}</h3>
+            <p>
+              {% editable 'index-text-024' %}
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="icon">{% editable 'index-text-025' %}</span>
+            <h3>{% editable 'index-text-026' %}</h3>
+            <p>
+              {% editable 'index-text-027' %}
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="icon">{% editable 'index-text-028' %}</span>
+            <h3>{% editable 'index-text-029' %}</h3>
+            <p>
+              {% editable 'index-text-030' %}
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="icon">{% editable 'index-text-031' %}</span>
+            <h3>{% editable 'index-text-032' %}</h3>
+            <p>
+              {% editable 'index-text-033' %}
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+   <!-- LATEST NEWS AND PUBLICATIONS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading row-heading">
+          <div>
+            <h1 class="eyebrow">{% editable 'index-text-034' %}</h1>
+            <h2>{% editable 'index-text-035' %}</h2>
+          </div>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <p class="news-label">{% editable 'index-text-036' %}</p>
+
+            <h3>{% editable 'index-text-037' %}</h3>
+
+            <p>
+              {% editable 'index-text-038' %}
+            </p>
+
+            <a href="{% editable 'index-link-039' %}">
+              {% editable 'index-text-040' %}
+            </a>
+          </article>
+
+          <article class="news-card">
+            <p class="news-label">{% editable 'index-text-041' %}</p>
+
+            <h3>{% editable 'index-text-042' %}</h3>
+
+            <p>
+              {% editable 'index-text-043' %}
+            </p>
+
+            <a href="{% editable 'index-link-044' %}">
+              {% editable 'index-text-045' %}
+            </a>
+          </article>
+
+          <article class="news-card">
+            <p class="news-label">{% editable 'index-text-046' %}</p>
+
+            <h3>{% editable 'index-text-047' %}</h3>
+
+            <p>
+              {% editable 'index-text-048' %}
+            </p>
+
+            <a href="{% editable 'index-link-049' %}">
+              {% editable 'index-text-050' %}
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="container newsletter-box">
+        <div>
+          <p class="eyebrow">{% editable 'index-text-051' %}</p>
+          <h2>{% editable 'index-text-052' %}</h2>
+          <p>
+            {% editable 'index-text-053' %}
+          </p>
+        </div>
+
+        <form class="newsletter-form">{% csrf_token %}
+          <input type="email" name="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn-primary">{% editable 'index-text-054' %}</button>
+        </form>
+        <p id="newsletterMessage" class="newsletter-message" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  {% include "includes/footer.html" %}
+
+  <script src="/static/assets/js/index.js"></script>
+</body>
+</html>

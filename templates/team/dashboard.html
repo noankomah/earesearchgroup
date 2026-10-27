@@ -1,0 +1,32 @@
+{% extends "team/base.html" %}
+{% block content %}
+<h1>Your workspace</h1>
+<p>Welcome, {{ user.get_full_name|default:user.username }}. Your assigned content appears below.</p>
+<form class="team-search" method="get" action="{% url 'team-dashboard' %}" role="search">
+  <label for="content-search">Search my content</label>
+  <div class="team-search-controls">
+    <input id="content-search" type="search" name="q" value="{{ query }}" maxlength="200" placeholder="Enter an exact word or phrase" aria-describedby="content-search-help">
+    <button class="btn btn-primary" type="submit">Search</button>
+    {% if query %}<a href="{% url 'team-dashboard' %}">Clear</a>{% endif %}
+  </div>
+  <small id="content-search-help">Matches whole words or phrases, regardless of capital letters.</small>
+</form>
+{% if query %}<p role="status">{{ result_count }} result{{ result_count|pluralize }} for “{{ query }}”.</p>{% endif %}
+{% for section in sections %}
+<section class="team-section">
+  <div class="team-heading"><h2>{{ section.label }}</h2>{% if section.can_add %}<a class="btn btn-primary" href="{% url 'team-create' section.kind %}">Create new</a>{% endif %}</div>
+  <div class="team-items">
+    {% for item in section.items %}
+    <article class="info-card">
+      <h3>{{ item }}</h3>
+      {% if item.search_excerpt %}<p class="team-search-excerpt">{{ item.search_excerpt }}</p>{% endif %}
+      {% if item.is_published == True %}<p>Published</p>{% elif item.is_published == False %}<p>Draft</p>{% endif %}
+      <a href="{% url 'team-edit' section.kind item.pk %}">Edit</a>
+    </article>
+    {% empty %}<p>No content has been assigned to you in this section.</p>{% endfor %}
+  </div>
+</section>
+{% empty %}
+{% if query %}<p>No matching content. Try another word or phrase, or <a href="{% url 'team-dashboard' %}">clear the search</a>.</p>{% else %}<p>Your account is ready. Ask your administrator to assign content and editing permissions.</p>{% endif %}
+{% endfor %}
+{% endblock %}

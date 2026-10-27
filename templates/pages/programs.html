@@ -1,0 +1,271 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% editable 'programs-text-001' %}</title>
+    <meta
+      name="description"
+      content="{% editable 'programs-meta-description' %}"
+    />
+
+    <link rel="stylesheet" href="/static/assets/css/about.css" />
+    <link rel="stylesheet" href="/static/assets/css/publications.css" />
+    <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownButtons = document.querySelectorAll(".nav-parent");
+      const routeLinks = document.querySelectorAll("[data-route-link]");
+      const mainNav = document.querySelector(".main-nav");
+      const menuToggle = document.querySelector(".menu-toggle");
+
+      dropdownButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          if (window.innerWidth > 1024) return;
+
+          const currentDropdown = button.closest(".nav-dropdown");
+          if (!currentDropdown) return;
+
+          document
+            .querySelectorAll(".nav-dropdown.is-open")
+            .forEach(function (dropdown) {
+              if (dropdown !== currentDropdown) {
+                dropdown.classList.remove("is-open");
+              }
+            });
+
+          currentDropdown.classList.toggle("is-open");
+        });
+      });
+
+      routeLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (window.innerWidth <= 1024) {
+            if (mainNav) {
+              mainNav.classList.remove("is-open");
+            }
+
+            document
+              .querySelectorAll(".nav-dropdown.is-open")
+              .forEach(function (dropdown) {
+                dropdown.classList.remove("is-open");
+              });
+
+            if (menuToggle) {
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+  <body>
+    <!-- HEADER -->
+    {% include "includes/navbar.html" %}
+
+    <main aria-label="Publications">
+
+      <!-- =====================================================
+          BLOGS SECTION
+          Route: publications.php#blogs
+      ====================================================== -->
+      <section id="blogs" class="about-route">
+        <div class="container">
+          <div class="section-heading wide">
+            <p class="eyebrow">{% editable 'programs-text-002' %}</p>
+            <h3>{% editable 'programs-text-003' %}</h3>
+            <p>
+              {% editable 'programs-text-004' %}
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <article class="value-card">
+              <h3>{% editable 'programs-text-005' %}</h3>
+              <p>
+                {% editable 'programs-text-006' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-007' %}</h3>
+              <p>
+                {% editable 'programs-text-008' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-009' %}</h3>
+              <p>
+                {% editable 'programs-text-010' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-011' %}</h3>
+              <p>
+                {% editable 'programs-text-012' %}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+          NEWSLETTERS SECTION
+          Route: publications.php#newsletters
+      ====================================================== -->
+      <section id="newsletters" class="about-route">
+        <div class="container">
+          <div class="section-heading wide">
+            <p class="eyebrow">{% editable 'programs-text-013' %}</p>
+            <h3>{% editable 'programs-text-014' %}</h3>
+            <p>
+              {% editable 'programs-text-015' %}
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <article class="value-card">
+              <h3>{% editable 'programs-text-016' %}</h3>
+              <p>
+                {% editable 'programs-text-017' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-018' %}</h3>
+              <p>
+                {% editable 'programs-text-019' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-020' %}</h3>
+              <p>
+                {% editable 'programs-text-021' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-022' %}</h3>
+              <p>
+                {% editable 'programs-text-023' %}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+          REPORTS SECTION
+          Route: publications.php#reports
+      ====================================================== -->
+      <section id="reports" class="about-route">
+        <div class="container">
+          <div class="section-heading wide">
+            <p class="eyebrow">{% editable 'programs-text-024' %}</p>
+            <h3>{% editable 'programs-text-025' %}</h3>
+            <p>
+              {% editable 'programs-text-026' %}
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <article class="value-card">
+              <h3>{% editable 'programs-text-027' %}</h3>
+              <p>
+                {% editable 'programs-text-028' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-029' %}</h3>
+              <p>
+                {% editable 'programs-text-030' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-031' %}</h3>
+              <p>
+                {% editable 'programs-text-032' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-033' %}</h3>
+              <p>
+                {% editable 'programs-text-034' %}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+          SCHOLARSHIP & OPPORTUNITIES SECTION
+          Route: publications.php#scholarship-opportunities
+      ====================================================== -->
+      <section id="scholarship-opportunities" class="about-route">
+        <div class="container">
+          <div class="section-heading wide">
+            <p class="eyebrow">{% editable 'programs-text-035' %}</p>
+            <h3>{% editable 'programs-text-036' %}</h3>
+            <p>
+              {% editable 'programs-text-037' %}
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <article class="value-card">
+              <h3>{% editable 'programs-text-038' %}</h3>
+              <p>
+                {% editable 'programs-text-039' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-040' %}</h3>
+              <p>
+                {% editable 'programs-text-041' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-042' %}</h3>
+              <p>
+                {% editable 'programs-text-043' %}
+              </p>
+            </article>
+
+            <article class="value-card">
+              <h3>{% editable 'programs-text-044' %}</h3>
+              <p>
+                {% editable 'programs-text-045' %}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    {% include "includes/footer.html" %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>

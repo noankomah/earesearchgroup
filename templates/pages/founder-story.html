@@ -1,0 +1,119 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% editable 'founder-story-text-001' %}
+    </title>
+
+    <meta
+        name="description"
+        content="The story behind {{ story.founder_name|default:"EA Research Group" }}, founder of EA Research Group."
+    >
+
+    <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
+    <link rel="stylesheet" href="/static/assets/css/publications.css?v=8">
+    <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<body>
+    {% include "includes/navbar.html" %}
+
+    <main class="about-route publication-route founder-story-page">
+        <section class="about-route publication-route">
+            <div class="container">
+
+                {% if story %}
+
+                    <article class="founder-story-card">
+
+                        <div class="founder-story-heading">
+                            <p class="founder-story-label">{% editable 'founder-story-text-002' %}</p>
+                        </div>
+
+                        <div class="founder-story-grid">
+                            {% if story.photo or story.photo_url %}
+                                <div class="founder-story-photo">
+                                    <img
+                                        src="{% picture story.photo story.photo_url %}"
+                                        alt="Photo of {{ story.founder_name }}"
+                                    >
+                                </div>
+                            {% endif %}
+
+                            <div class="founder-story-main">
+                                <h1>{{ story.founder_name }}</h1>
+
+                                {% if story.role_title %}
+                                    <p class="founder-story-role">
+                                        {{ story.role_title }}
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        {% if sections %}
+                            <div class="founder-story-sections">
+                                {% for section in sections %}
+                                    {% if not section.heading and not section.body %}
+
+                                    {% endif %}
+
+                                    <section class="founder-story-section">
+                                        {% if section.heading %}
+                                            <h2>{{ section.heading }}</h2>
+                                        {% endif %}
+
+                                        <div class="founder-story-body">
+                                            {{ section.body|rich_text }}
+                                        </div>
+                                    </section>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                    </article>
+
+                {% else %}
+
+                    <section class="opportunity-state opportunity-error-state">
+                        <h1>{% editable 'founder-story-text-004' %}</h1>
+                        <p>{{ errorMessage }}</p>
+                    </section>
+
+                {% endif %}
+
+            </div>
+        </section>
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const year = document.getElementById("year");
+
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
+
+            const dropdownButtons = document.querySelectorAll(".nav-parent");
+
+            dropdownButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    if (window.innerWidth > 1024) return;
+
+                    const dropdown = button.closest(".nav-dropdown");
+
+                    if (dropdown) {
+                        dropdown.classList.toggle("is-open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

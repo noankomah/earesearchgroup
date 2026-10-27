@@ -1,0 +1,362 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ publication.title }} {% editable 'publication-text-001' %}
+    </title>
+
+    <meta
+        name="description"
+        content="{{ publication.summary }}"
+    >
+
+    <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
+    <link rel="stylesheet" href="/static/assets/css/publications.css?v=6">
+    <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<body>
+    {% include "includes/navbar.html" %}
+
+    <main class="publication-detail-page">
+        <section class="publication-route">
+            <div class="container">
+
+                <a
+                    href="{% editable 'publication-link-002' %}"
+                    class="publication-back-link"
+                    id="publication-back-link"
+                >
+                    {% editable 'publication-text-003' %}
+                </a>
+
+                {% if publication %}
+
+                    <div class="publication-detail-layout">
+
+                    <article class="publication-detail-card">
+
+                        <div class="publication-detail-heading">
+                            <p class="publication-type">
+                                {{ publication.publication_type }}
+                            </p>
+
+                            {% if publication.is_featured %}
+                                <span class="publication-featured-badge">
+                                    {% editable 'publication-text-004' %}
+                                </span>
+                            {% endif %}
+                        </div>
+
+                        <h1>{{ publication.title }}</h1>
+
+                        <p class="publication-detail-summary">
+                            {{ publication.summary }}
+                        </p>
+
+                        <div class="publication-detail-meta">
+                            <div>
+                                <strong>{% editable 'publication-text-005' %}</strong>
+                                <span>
+                                    {{ publication.publication_type }}
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>{% editable 'publication-text-006' %}</strong>
+                                <span>
+                                    {{ publication.publication_date|date:"j F Y"|default:"Not specified" }}
+                                </span>
+                            </div>
+
+                            {% if publication.author %}
+                                <div>
+                                    <strong>{% editable 'publication-text-007' %}</strong>
+                                    <span>{{ publication.author }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        {% if lightboxImages %}
+                            <div
+                                class="publication-gallery-root"
+                                id="publication-gallery-root"
+                                data-images="{{ lightbox_json }}"
+                            >
+                                {% if gallery %}
+                                    <div class="publication-gallery">
+                                        {% for imagePath in gallery %}
+                                            <button
+                                                type="button"
+                                                class="publication-gallery-thumb publication-gallery-zoom"
+                                                data-index="{{ forloop.counter0 }}"
+                                                aria-label="Zoom image {{ forloop.counter }}"
+                                            >
+                                                <img
+                                                    src="{{ imagePath }}"
+                                                    alt="{{ publication.title }}"
+                                                    loading="lazy"
+                                                >
+                                            </button>
+                                        {% endfor %}
+                                    </div>
+                                {% elif cover_url %}
+                                    <button
+                                        type="button"
+                                        class="publication-cover-zoom publication-gallery-zoom"
+                                        data-index="0"
+                                        aria-label="Zoom image"
+                                    >
+                                        <img
+                                            src="{{ cover_url }}"
+                                            alt="{{ publication.title }}"
+                                            class="publication-cover-image"
+                                        >
+                                    </button>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        <div class="publication-detail-body">
+                            {{ publication.full_content|rich_text }}
+                        </div>
+
+                        {% if publication.document_link %}
+                            <a
+                                href="{{ publication.document_link|public_url }}"
+                                class="publication-document-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {% editable 'publication-text-011' %}
+                            </a>
+                        {% endif %}
+
+                    </article>
+
+                    {% if lightboxImages %}
+                        <aside
+                            class="publication-detail-images publication-gallery-root"
+                            id="publication-gallery-aside"
+                            aria-label="Publication images"
+                            data-images="{{ lightbox_json }}"
+                        >
+                            <p class="publication-images-label">
+                                {% editable 'publication-text-012' %}
+                            </p>
+
+                            {% if gallery %}
+                                <div class="publication-gallery">
+                                    {% for imagePath in gallery %}
+                                        <button
+                                            type="button"
+                                            class="publication-gallery-thumb publication-gallery-zoom"
+                                            data-index="{{ forloop.counter0 }}"
+                                            aria-label="Zoom image {{ forloop.counter }}"
+                                        >
+                                            <img
+                                                src="{{ imagePath }}"
+                                                alt="{{ publication.title }}"
+                                                loading="lazy"
+                                            >
+                                        </button>
+                                    {% endfor %}
+                                </div>
+                            {% elif cover_url %}
+                                <button
+                                    type="button"
+                                    class="publication-cover-zoom publication-gallery-zoom"
+                                    data-index="0"
+                                    aria-label="Zoom image"
+                                >
+                                    <img
+                                        src="{{ cover_url }}"
+                                        alt="{{ publication.title }}"
+                                        class="publication-cover-image"
+                                    >
+                                </button>
+                            {% endif %}
+                        </aside>
+                    {% endif %}
+
+                    </div>
+
+                {% else %}
+
+                    <section class="opportunity-state opportunity-error-state">
+                        <h1>{% editable 'publication-text-015' %}</h1>
+                        <p>{{ errorMessage }}</p>
+                    </section>
+
+                {% endif %}
+
+            </div>
+        </section>
+    </main>
+
+    {% if lightboxImages %}
+        <div
+            class="publication-lightbox"
+            id="publication-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image viewer"
+            hidden
+        >
+            <button
+                type="button"
+                class="publication-lightbox-close"
+                id="publication-lightbox-close"
+                aria-label="Close image viewer"
+            >{% editable 'publication-text-016' %}</button>
+
+            {% if lightboxImages|length > 1 %}
+                <button
+                    type="button"
+                    class="publication-lightbox-nav publication-lightbox-prev"
+                    id="publication-lightbox-prev"
+                    aria-label="Previous image"
+                >{% editable 'publication-text-017' %}</button>
+
+                <button
+                    type="button"
+                    class="publication-lightbox-nav publication-lightbox-next"
+                    id="publication-lightbox-next"
+                    aria-label="Next image"
+                >{% editable 'publication-text-018' %}</button>
+            {% endif %}
+
+            <figure class="publication-lightbox-figure">
+                <img id="publication-lightbox-img" src="{% editable 'publication-image-019' %}" alt="">
+            </figure>
+        </div>
+    {% endif %}
+
+    {% include "includes/footer.html" %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const year = document.getElementById("year");
+
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
+
+            const publicationType =
+                "{{ publication.publication_type|escapejs }}";
+
+            const backLink = document.getElementById("publication-back-link");
+
+            if (backLink) {
+                const routeMap = {
+                    Blog: "blogs",
+                    Newsletter: "newsletters",
+                    Report: "reports"
+                };
+
+                const route = routeMap[publicationType] || "blogs";
+
+                backLink.href = `/publications.php#${route}`;
+            }
+
+            const dropdownButtons = document.querySelectorAll(".nav-parent");
+
+            dropdownButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    if (window.innerWidth > 1024) return;
+
+                    const dropdown = button.closest(".nav-dropdown");
+
+                    if (dropdown) {
+                        dropdown.classList.toggle("is-open");
+                    }
+                });
+            });
+
+            const galleryRoot = document.getElementById("publication-gallery-root");
+
+            if (galleryRoot) {
+                let galleryImages = [];
+
+                try {
+                    galleryImages = JSON.parse(galleryRoot.dataset.images) || [];
+                } catch (e) {
+                    galleryImages = [];
+                }
+
+                const lightbox = document.getElementById("publication-lightbox");
+                const lightboxImg = document.getElementById("publication-lightbox-img");
+                const closeBtn = document.getElementById("publication-lightbox-close");
+                const prevBtn = document.getElementById("publication-lightbox-prev");
+                const nextBtn = document.getElementById("publication-lightbox-next");
+                let activeIndex = 0;
+
+                function openLightbox(index) {
+                    if (!lightbox || !galleryImages.length) return;
+
+                    activeIndex = (index + galleryImages.length) % galleryImages.length;
+
+                    lightboxImg.src = galleryImages[activeIndex];
+                    lightboxImg.alt = "Viewing image " + (activeIndex + 1) + " of " + galleryImages.length;
+                    lightbox.hidden = false;
+                    document.body.style.overflow = "hidden";
+                }
+
+                function closeLightbox() {
+                    if (!lightbox) return;
+
+                    lightbox.hidden = true;
+                    document.body.style.overflow = "";
+                }
+
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", closeLightbox);
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener("click", function () {
+                        openLightbox(activeIndex - 1);
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener("click", function () {
+                        openLightbox(activeIndex + 1);
+                    });
+                }
+
+                // Clicking the dark area outside the image closes the viewer.
+                if (lightbox) {
+                    lightbox.addEventListener("click", function (event) {
+                        if (event.target === lightbox || event.target === lightboxImg) {
+                            closeLightbox();
+                        }
+                    });
+                }
+
+                document.addEventListener("keydown", function (event) {
+                    if (!lightbox || lightbox.hidden) return;
+
+                    if (event.key === "Escape") {
+                        closeLightbox();
+                    } else if (event.key === "ArrowLeft" && prevBtn) {
+                        openLightbox(activeIndex - 1);
+                    } else if (event.key === "ArrowRight" && nextBtn) {
+                        openLightbox(activeIndex + 1);
+                    }
+                });
+
+                document.querySelectorAll(".publication-gallery-zoom").forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        openLightbox(Number(button.dataset.index || 0));
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ opportunity.title }}
+    </title>
+
+    <meta
+        name="description"
+        content="{{ opportunity.summary }}"
+    >
+
+    <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
+    <link rel="stylesheet" href="/static/assets/css/publications.css?v=3">
+    <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<body>
+    {% include "includes/navbar.html" %}
+
+    <main class="opportunity-detail-page">
+        <section class="about-route publication-route">
+            <div class="container">
+
+                <a
+                    href="{% editable 'opportunity-link-001' %}"
+                    class="opportunity-back-link"
+                >
+                    {% editable 'opportunity-text-002' %}
+                </a>
+
+                {% if opportunity %}
+
+                    <article class="opportunity-detail-card">
+
+                        <div class="opportunity-detail-heading">
+                            <p class="opportunity-type">
+                                {{ opportunity.category }}
+                            </p>
+
+                            {% if opportunity.is_featured %}
+                                <span class="opportunity-featured-badge">
+                                    {% editable 'opportunity-text-003' %}
+                                </span>
+                            {% endif %}
+                        </div>
+
+                        <h1>{{ opportunity.title }}</h1>
+
+                        <p class="opportunity-detail-summary">
+                            {{ opportunity.summary }}
+                        </p>
+
+                        <div class="opportunity-detail-meta">
+                            <div>
+                                <strong>{% editable 'opportunity-text-004' %}</strong>
+                                <span>{{ opportunity.status }}</span>
+                            </div>
+
+                            <div>
+                                <strong>{% editable 'opportunity-text-005' %}</strong>
+                                <span>
+                                    {{ opportunity.deadline|date:"j F Y"|default:"Not specified" }}
+                                </span>
+                            </div>
+
+                            {% if opportunity.country %}
+                                <div>
+                                    <strong>{% editable 'opportunity-text-006' %}</strong>
+                                    <span>{{ opportunity.country }}</span>
+                                </div>
+                            {% endif %}
+
+                            {% if opportunity.host_organization %}
+                                <div>
+                                    <strong>{% editable 'opportunity-text-007' %}</strong>
+                                    <span>
+                                        {{ opportunity.host_organization }}
+                                    </span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="opportunity-detail-body">
+                            {{ opportunity.full_description|rich_text }}
+                        </div>
+
+                        {% if opportunity.application_link %}
+                            <a
+                                href="{{ opportunity.application_link|public_url }}"
+                                class="opportunity-apply-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {% editable 'opportunity-text-009' %}
+                            </a>
+                        {% endif %}
+
+                    </article>
+
+                {% else %}
+
+                    <section class="opportunity-state opportunity-error-state">
+                        <h1>{% editable 'opportunity-text-010' %}</h1>
+                        <p>{{ errorMessage }}</p>
+                    </section>
+
+                {% endif %}
+
+            </div>
+        </section>
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const year = document.getElementById("year");
+
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
+
+            const dropdownButtons = document.querySelectorAll(".nav-parent");
+
+            dropdownButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    if (window.innerWidth > 1024) return;
+
+                    const dropdown = button.closest(".nav-dropdown");
+
+                    if (dropdown) {
+                        dropdown.classList.toggle("is-open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

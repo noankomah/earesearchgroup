@@ -1,0 +1,269 @@
+/*
+ * Styles for the public survey page (survey.php).
+ *
+ * Loaded AFTER bootstrap.min.css and about.css, so it fine-tunes the survey
+ * to match the site's brand colours. Everything is scoped under
+ * ".survey-main" so it cannot leak into other pages.
+ */
+
+main.survey-main {
+    background: var(--green-50, #f7fbf8);
+    margin-top: 0;
+    padding: 48px 0 72px;
+}
+
+.survey-header {
+    max-width: 820px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.survey-eyebrow {
+    color: var(--gold, #d9a441);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 0 0 10px;
+}
+
+.survey-header h1 {
+    color: var(--green-900, #0f2f24);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+
+.survey-intro {
+    color: var(--muted-text, #5f6f68);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.survey-form {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--white, #fff);
+    border: 1px solid var(--border, #dfe8e2);
+    border-radius: var(--radius, 18px);
+    box-shadow: var(--soft-shadow, 0 10px 30px rgba(15, 47, 36, 0.07));
+    padding: 28px clamp(18px, 4vw, 40px) 36px;
+}
+
+.survey-required-note {
+    color: var(--muted-text, #5f6f68);
+    font-size: 0.85rem;
+    margin: 0 0 18px;
+}
+
+.survey-req {
+    color: #c0392b;
+    font-weight: 800;
+}
+
+.survey-question {
+    border: 1px solid var(--border, #dfe8e2);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 0 0 18px;
+}
+
+.survey-question:focus-within {
+    border-color: var(--gold, #d9a441);
+    box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.18);
+}
+
+.survey-question.has-error {
+    border-color: #c0392b;
+}
+
+.survey-legend {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    color: var(--green-900, #0f2f24);
+    font-weight: 800;
+    font-size: 1.02rem;
+    line-height: 1.45;
+}
+
+.survey-help {
+    color: var(--muted-text, #5f6f68);
+    font-size: 0.9rem;
+    margin: 6px 0 12px;
+}
+
+.survey-options {
+    margin-top: 4px;
+}
+
+.survey-options .form-check {
+    margin-bottom: 6px;
+}
+
+.survey-options .form-check-input {
+    /* Black border so radio/checkbox controls are clearly visible on white. */
+    accent-color: var(--green-700, #1f6b4f);
+    border-color: #000;
+}
+
+/* Selected radios/checkboxes fill brand green instead of Bootstrap blue. */
+.survey-form .form-check-input:checked {
+    background-color: var(--green-700, #1f6b4f);
+    border-color: #000;
+}
+
+.survey-options .form-check-label {
+    color: var(--text, #1d2521);
+    cursor: pointer;
+    padding-left: 4px;
+}
+
+.survey-form .form-control {
+    border: 1px solid var(--border, #dfe8e2);
+    border-radius: 12px;
+    padding: 11px 14px;
+    color: var(--text, #1d2521);
+    background: var(--white, #fff);
+}
+
+.survey-form .form-control:focus {
+    border-color: var(--gold, #d9a441);
+    box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.28);
+    outline: none;
+}
+
+.survey-other-text {
+    margin-top: 8px;
+}
+
+.survey-scale {
+    margin-top: 6px;
+}
+
+.survey-scale-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.survey-scale-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42px;
+    gap: 4px;
+}
+
+.survey-scale-item .form-check-input {
+    margin: 0;
+    accent-color: var(--green-700, #1f6b4f);
+    border-color: #000;
+}
+
+.survey-scale-item label {
+    font-size: 0.82rem;
+    color: var(--muted-text, #5f6f68);
+    cursor: pointer;
+}
+
+.survey-scale-label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted-text, #5f6f68);
+}
+
+.survey-error {
+    color: #c0392b;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 10px 0 0;
+}
+
+.survey-alert,
+.survey-notice {
+    background: #fdecea;
+    border: 1px solid #f5c6c0;
+    color: #8b2a1f;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 0 0 18px;
+}
+
+.survey-notice {
+    max-width: 820px;
+    margin: 0 auto 18px;
+    background: var(--green-100, #eaf5ef);
+    border-color: #bfe0d1;
+    color: var(--green-800, #174535);
+}
+
+.survey-thankyou {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--white, #fff);
+    border: 1px solid #bfe0d1;
+    border-left: 6px solid var(--green-700, #1f6b4f);
+    border-radius: var(--radius, 18px);
+    box-shadow: var(--soft-shadow, 0 10px 30px rgba(15, 47, 36, 0.07));
+    padding: 32px clamp(18px, 4vw, 40px);
+    text-align: center;
+}
+
+.survey-thankyou h2 {
+    color: var(--green-800, #174535);
+    margin: 0 0 8px;
+}
+
+.survey-thankyou p {
+    color: var(--muted-text, #5f6f68);
+    margin: 0;
+}
+
+.survey-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.survey-actions .btn {
+    min-width: 190px;
+}
+
+.survey-actions .btn[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.survey-status {
+    color: var(--muted-text, #5f6f68);
+    font-size: 0.9rem;
+}
+
+/* Honeypot field: present in the HTML but not shown to real visitors. */
+.survey-honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media (max-width: 560px) {
+    .survey-form {
+        padding: 20px 16px 28px;
+    }
+
+    .survey-question {
+        padding: 16px;
+    }
+
+    .survey-actions .btn {
+        width: 100%;
+    }
+}

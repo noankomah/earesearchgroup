@@ -1,0 +1,39 @@
+[
+  {
+    "_comment": "Hero slider images. Array order = slide order; the first entry is shown first and starts as the active slide. 'position' is the CSS background-position. The EA logo slide below was added as the opening slide.",
+    "src": "assets/images/hero_images/ea-logo-green.jpg",
+    "position": "center 45%"
+  },
+  {
+    "src": "assets/images/hero_images/image1.jpg",
+    "position": "center 45%"
+  },
+  {
+    "src": "assets/images/hero_images/image2.jpg",
+    "position": "center 20%"
+  },
+  {
+    "src": "assets/images/hero_images/stake-holders6.jpg",
+    "position": "center center"
+  },
+  {
+    "src": "assets/images/hero_images/image3.jpg",
+    "position": "center 20%"
+  },
+  {
+    "src": "assets/images/hero_images/stake-holders2.jpg",
+    "position": "center center"
+  },
+  {
+    "src": "assets/images/hero_images/stake-holders3.jpg",
+    "position": "center 30%"
+  },
+  {
+    "src": "assets/images/hero_images/stake-holders5.jpg",
+    "position": "center 28%"
+  },
+  {
+    "src": "assets/images/hero_images/stake-holders4.jpg",
+    "position": "center 30%"
+  }
+]

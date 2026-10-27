@@ -1,0 +1,31 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% editable 'events-text-001' %}</title>
+  <meta name="description" content="{% editable 'events-meta-description' %}" />
+
+  <link rel="stylesheet" href="/static/assets/css/about.css" />
+  <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  {% include "includes/navbar.html" %}
+
+  <main class="empty-page" aria-label="Events">{% for event in events %}<section class="section"><div class="container"><article class="info-card"><h1>{{ event.title }}</h1>{% if event.image %}<img src="{{ event.image.url }}" alt="{{ event.title }}" style="max-width:100%">{% endif %}<p>{{ event.summary }}</p>{% if event.starts_at %}<p>{{ event.starts_at }} {% editable 'events-text-003' %} {{ event.location }}</p>{% endif %}<div>{{ event.body|rich_text }}</div>{% if event.registration_link %}<a class="btn btn-primary" href="{{ event.registration_link|public_url }}">{% editable 'events-text-005' %}</a>{% endif %}</article></div></section>{% endfor %}</main>
+
+  <!-- FOOTER -->
+  {% include "includes/footer.html" %}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

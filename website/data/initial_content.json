@@ -1,0 +1,2186 @@
+{
+  "blocks": [
+    {
+      "key": "about-text-001",
+      "page": "about",
+      "label": "About Us | EA Research Group",
+      "kind": "text",
+      "value": "About Us | EA Research Group"
+    },
+    {
+      "key": "about-text-002",
+      "page": "about",
+      "label": "Who We Are",
+      "kind": "text",
+      "value": "Who We Are"
+    },
+    {
+      "key": "about-text-003",
+      "page": "about",
+      "label": "EARG is a platform for research mentorship, academic excellence and development. We supports young scholars to grow as researchers, professionals and problem-solvers through struct",
+      "kind": "text",
+      "value": "EARG is a platform for research mentorship, academic excellence and development. We supports young scholars to grow as researchers, professionals and problem-solvers\n              through structured mentorship, applied research experience and community-focused scientific work."
+    },
+    {
+      "key": "about-text-004",
+      "page": "about",
+      "label": "01",
+      "kind": "text",
+      "value": "01"
+    },
+    {
+      "key": "about-text-005",
+      "page": "about",
+      "label": "What we are",
+      "kind": "text",
+      "value": "What we are"
+    },
+    {
+      "key": "about-text-006",
+      "page": "about",
+      "label": "Effective Altruist Research Group is a non-profit, non-governmental, non-political and non-religious organization based in Tamale, Ghana.",
+      "kind": "text",
+      "value": "Effective Altruist Research Group is a non-profit, non-governmental,\n                non-political and non-religious organization based in Tamale, Ghana."
+    },
+    {
+      "key": "about-text-007",
+      "page": "about",
+      "label": "02",
+      "kind": "text",
+      "value": "02"
+    },
+    {
+      "key": "about-text-008",
+      "page": "about",
+      "label": "What we do",
+      "kind": "text",
+      "value": "What we do"
+    },
+    {
+      "key": "about-text-009",
+      "page": "about",
+      "label": "We strengthen research capacity through mentorship, research training, academic development, consultancy, scholarship support and SDG-aligned programs.",
+      "kind": "text",
+      "value": "We strengthen research capacity through mentorship, research training,\n                academic development, consultancy, scholarship support and SDG-aligned programs."
+    },
+    {
+      "key": "about-text-010",
+      "page": "about",
+      "label": "Mission",
+      "kind": "text",
+      "value": "Mission"
+    },
+    {
+      "key": "about-text-011",
+      "page": "about",
+      "label": "To strengthen research capacity among young scholars.",
+      "kind": "text",
+      "value": "To strengthen research capacity among young scholars."
+    },
+    {
+      "key": "about-text-012",
+      "page": "about",
+      "label": "EARG provides structured mentorship, applied research experience and postgraduate preparation while delivering high-quality research and consultancy services that support evidence-",
+      "kind": "text",
+      "value": "EARG provides structured mentorship, applied research experience and postgraduate\n                preparation while delivering high-quality research and consultancy services that\n                support evidence-based decision-making."
+    },
+    {
+      "key": "about-text-013",
+      "page": "about",
+      "label": "Vision",
+      "kind": "text",
+      "value": "Vision"
+    },
+    {
+      "key": "about-text-014",
+      "page": "about",
+      "label": "To become a leading African research and academic development institution.",
+      "kind": "text",
+      "value": "To become a leading African research and academic development institution."
+    },
+    {
+      "key": "about-text-015",
+      "page": "about",
+      "label": "EARG seeks to empower young scholars to excel in research, innovation and impactful knowledge creation while advancing sustainable development through evidence-based work.",
+      "kind": "text",
+      "value": "EARG seeks to empower young scholars to excel in research, innovation and impactful\n                knowledge creation while advancing sustainable development through evidence-based work."
+    },
+    {
+      "key": "about-text-016",
+      "page": "about",
+      "label": "Core Values",
+      "kind": "text",
+      "value": "Core Values"
+    },
+    {
+      "key": "about-text-017",
+      "page": "about",
+      "label": "The principles that guide our work.",
+      "kind": "text",
+      "value": "The principles that guide our work."
+    },
+    {
+      "key": "about-text-018",
+      "page": "about",
+      "label": "Scientific Integrity",
+      "kind": "text",
+      "value": "Scientific Integrity"
+    },
+    {
+      "key": "about-text-019",
+      "page": "about",
+      "label": "We uphold ethical, honest and evidence-informed research practice.",
+      "kind": "text",
+      "value": "We uphold ethical, honest and evidence-informed research practice."
+    },
+    {
+      "key": "about-text-020",
+      "page": "about",
+      "label": "Excellence",
+      "kind": "text",
+      "value": "Excellence"
+    },
+    {
+      "key": "about-text-021",
+      "page": "about",
+      "label": "We pursue high standards in mentorship, research and organizational work.",
+      "kind": "text",
+      "value": "We pursue high standards in mentorship, research and organizational work."
+    },
+    {
+      "key": "about-text-022",
+      "page": "about",
+      "label": "Transparency",
+      "kind": "text",
+      "value": "Transparency"
+    },
+    {
+      "key": "about-text-023",
+      "page": "about",
+      "label": "We value accountability, openness and responsible decision-making.",
+      "kind": "text",
+      "value": "We value accountability, openness and responsible decision-making."
+    },
+    {
+      "key": "about-text-024",
+      "page": "about",
+      "label": "Inclusivity",
+      "kind": "text",
+      "value": "Inclusivity"
+    },
+    {
+      "key": "about-text-025",
+      "page": "about",
+      "label": "We promote respect, cultural sensitivity and equal opportunity.",
+      "kind": "text",
+      "value": "We promote respect, cultural sensitivity and equal opportunity."
+    },
+    {
+      "key": "about-text-026",
+      "page": "about",
+      "label": "Governing Board",
+      "kind": "text",
+      "value": "Governing Board"
+    },
+    {
+      "key": "about-text-027",
+      "page": "about",
+      "label": "The Governing Board provides strategic oversight, policy direction, accountability and institutional guidance for EARG.",
+      "kind": "text",
+      "value": "The Governing Board provides strategic oversight, policy direction,\n              accountability and institutional guidance for EARG."
+    },
+    {
+      "key": "about-text-028",
+      "page": "about",
+      "label": "Advisory Board",
+      "kind": "text",
+      "value": "Advisory Board"
+    },
+    {
+      "key": "about-text-029",
+      "page": "about",
+      "label": "Our Team",
+      "kind": "text",
+      "value": "Our Team"
+    },
+    {
+      "key": "about-text-030",
+      "page": "about",
+      "label": "The executive team leads day-to-day implementation, administration, coordination and operational delivery of EARG’s programs.",
+      "kind": "text",
+      "value": "The executive team leads day-to-day implementation, administration,\n              coordination and operational delivery of EARG’s programs."
+    },
+    {
+      "key": "about-text-031",
+      "page": "about",
+      "label": "Reach out to EA Research Group.",
+      "kind": "text",
+      "value": "Reach out to EA Research Group."
+    },
+    {
+      "key": "about-text-032",
+      "page": "about",
+      "label": "For partnerships, mentorship, research collaboration, consultancy, events or general enquiries, contact us through the details below.",
+      "kind": "text",
+      "value": "For partnerships, mentorship, research collaboration, consultancy,\n              events or general enquiries, contact us through the details below."
+    },
+    {
+      "key": "about-text-033",
+      "page": "about",
+      "label": "Email",
+      "kind": "text",
+      "value": "Email"
+    },
+    {
+      "key": "contact-email",
+      "page": "contact",
+      "label": "earesearchgrp24@gmail.com",
+      "kind": "text",
+      "value": "earesearchgrp24@gmail.com"
+    },
+    {
+      "key": "about-text-035",
+      "page": "about",
+      "label": "Location",
+      "kind": "text",
+      "value": "Location"
+    },
+    {
+      "key": "contact-address",
+      "page": "contact",
+      "label": "Tamale, Northern Region, Ghana",
+      "kind": "text",
+      "value": "Tamale, Northern Region, Ghana"
+    },
+    {
+      "key": "about-text-036",
+      "page": "about",
+      "label": "Focus Areas",
+      "kind": "text",
+      "value": "Focus Areas"
+    },
+    {
+      "key": "about-text-037",
+      "page": "about",
+      "label": "Research mentorship, academic development, consultancy, scholarships and community-based scientific development.",
+      "kind": "text",
+      "value": "Research mentorship, academic development, consultancy, scholarships and community-based scientific development."
+    },
+    {
+      "key": "about-text-038",
+      "page": "about",
+      "label": "Send a message",
+      "kind": "text",
+      "value": "Send a message"
+    },
+    {
+      "key": "about-text-039",
+      "page": "about",
+      "label": "Full Name",
+      "kind": "text",
+      "value": "Full Name"
+    },
+    {
+      "key": "about-text-040",
+      "page": "about",
+      "label": "Email Address",
+      "kind": "text",
+      "value": "Email Address"
+    },
+    {
+      "key": "about-text-041",
+      "page": "about",
+      "label": "Message",
+      "kind": "text",
+      "value": "Message"
+    },
+    {
+      "key": "about-text-042",
+      "page": "about",
+      "label": "Send Message",
+      "kind": "text",
+      "value": "Send Message"
+    },
+    {
+      "key": "index-text-001",
+      "page": "index",
+      "label": "EA Research Group | Research, Mentorship, Innovation and Impact",
+      "kind": "text",
+      "value": "EA Research Group | Research, Mentorship, Innovation and Impact"
+    },
+    {
+      "key": "index-text-002",
+      "page": "index",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "index-text-003",
+      "page": "index",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "index-text-004",
+      "page": "index",
+      "label": "Who we are",
+      "kind": "text",
+      "value": "Who we are"
+    },
+    {
+      "key": "index-text-005",
+      "page": "index",
+      "label": "Effective Altruist Research Group is a non-profit, non-governmental, non-political and non-religious organization based in Tamale, Ghana. We exist to strengthen research capacity a",
+      "kind": "text",
+      "value": "Effective Altruist Research Group is a non-profit, non-governmental,\n            non-political and non-religious organization based in Tamale, Ghana.\n            We exist to strengthen research capacity among young scholars while\n            supporting evidence-based research and community-based scientific development."
+    },
+    {
+      "key": "index-text-006",
+      "page": "index",
+      "label": "Through mentorship, applied research experience, consultancy, scholarship support and strategic partnerships, EARG creates pathways for young people to grow as researchers, profess",
+      "kind": "text",
+      "value": "Through mentorship, applied research experience, consultancy, scholarship\n            support and strategic partnerships, EARG creates pathways for young people\n            to grow as researchers, professionals and problem-solvers."
+    },
+    {
+      "key": "index-link-007",
+      "page": "index",
+      "label": "about.php#who-we-are",
+      "kind": "link",
+      "value": "about.php#who-we-are"
+    },
+    {
+      "key": "index-text-008",
+      "page": "index",
+      "label": "Learn More",
+      "kind": "text",
+      "value": "Learn More"
+    },
+    {
+      "key": "index-link-009",
+      "page": "index",
+      "label": "about.php#contact-us",
+      "kind": "link",
+      "value": "about.php#contact-us"
+    },
+    {
+      "key": "index-text-010",
+      "page": "index",
+      "label": "Work With Us",
+      "kind": "text",
+      "value": "Work With Us"
+    },
+    {
+      "key": "index-text-011",
+      "page": "index",
+      "label": "Our Core Direction",
+      "kind": "text",
+      "value": "Our Core Direction"
+    },
+    {
+      "key": "index-text-012",
+      "page": "index",
+      "label": "Mentorship",
+      "kind": "text",
+      "value": "Mentorship"
+    },
+    {
+      "key": "index-text-013",
+      "page": "index",
+      "label": "Guiding young scholars into research and postgraduate pathways.",
+      "kind": "text",
+      "value": "Guiding young scholars into research and postgraduate pathways."
+    },
+    {
+      "key": "index-text-014",
+      "page": "index",
+      "label": "Research",
+      "kind": "text",
+      "value": "Research"
+    },
+    {
+      "key": "index-text-015",
+      "page": "index",
+      "label": "Supporting ethical, applied and policy-relevant research.",
+      "kind": "text",
+      "value": "Supporting ethical, applied and policy-relevant research."
+    },
+    {
+      "key": "index-text-016",
+      "page": "index",
+      "label": "Consultancy",
+      "kind": "text",
+      "value": "Consultancy"
+    },
+    {
+      "key": "index-text-017",
+      "page": "index",
+      "label": "Delivering research, evaluation and advisory services.",
+      "kind": "text",
+      "value": "Delivering research, evaluation and advisory services."
+    },
+    {
+      "key": "index-text-018",
+      "page": "index",
+      "label": "SDG Impact",
+      "kind": "text",
+      "value": "SDG Impact"
+    },
+    {
+      "key": "index-text-019",
+      "page": "index",
+      "label": "Aligning education, health, work, environment and partnerships.",
+      "kind": "text",
+      "value": "Aligning education, health, work, environment and partnerships."
+    },
+    {
+      "key": "index-text-020",
+      "page": "index",
+      "label": "What we do",
+      "kind": "text",
+      "value": "What we do"
+    },
+    {
+      "key": "index-text-021",
+      "page": "index",
+      "label": "Programs designed for research, mentorship, innovation and community impact.",
+      "kind": "text",
+      "value": "Programs designed for research, mentorship, innovation and community impact."
+    },
+    {
+      "key": "index-text-022",
+      "page": "index",
+      "label": "🎓",
+      "kind": "text",
+      "value": "🎓"
+    },
+    {
+      "key": "index-text-023",
+      "page": "index",
+      "label": "Mentorship and Fellowship",
+      "kind": "text",
+      "value": "Mentorship and Fellowship"
+    },
+    {
+      "key": "index-text-024",
+      "page": "index",
+      "label": "Structured support for final-year students, graduates and emerging researchers interested in academic and research careers.",
+      "kind": "text",
+      "value": "Structured support for final-year students, graduates and emerging\n              researchers interested in academic and research careers."
+    },
+    {
+      "key": "index-text-025",
+      "page": "index",
+      "label": "🔬",
+      "kind": "text",
+      "value": "🔬"
+    },
+    {
+      "key": "index-text-026",
+      "page": "index",
+      "label": "Research Capacity",
+      "kind": "text",
+      "value": "Research Capacity"
+    },
+    {
+      "key": "index-text-027",
+      "page": "index",
+      "label": "Training in research methods, data collection, data analysis, scientific writing, ethics and academic professionalism.",
+      "kind": "text",
+      "value": "Training in research methods, data collection, data analysis,\n              scientific writing, ethics and academic professionalism."
+    },
+    {
+      "key": "index-text-028",
+      "page": "index",
+      "label": "🌿",
+      "kind": "text",
+      "value": "🌿"
+    },
+    {
+      "key": "index-text-029",
+      "page": "index",
+      "label": "Community Research",
+      "kind": "text",
+      "value": "Community Research"
+    },
+    {
+      "key": "index-text-030",
+      "page": "index",
+      "label": "Research and engagement in public health, medicinal plants, biodiversity conservation and environmental sustainability.",
+      "kind": "text",
+      "value": "Research and engagement in public health, medicinal plants,\n              biodiversity conservation and environmental sustainability."
+    },
+    {
+      "key": "index-text-031",
+      "page": "index",
+      "label": "🤝",
+      "kind": "text",
+      "value": "🤝"
+    },
+    {
+      "key": "index-text-032",
+      "page": "index",
+      "label": "Consultancy and Partnerships",
+      "kind": "text",
+      "value": "Consultancy and Partnerships"
+    },
+    {
+      "key": "index-text-033",
+      "page": "index",
+      "label": "Research, evaluation and advisory services that support evidence-based decisions and help sustain scholarships and programs.",
+      "kind": "text",
+      "value": "Research, evaluation and advisory services that support evidence-based\n              decisions and help sustain scholarships and programs."
+    },
+    {
+      "key": "index-text-034",
+      "page": "index",
+      "label": "Latest updates",
+      "kind": "text",
+      "value": "Latest updates"
+    },
+    {
+      "key": "index-text-035",
+      "page": "index",
+      "label": "News and publications",
+      "kind": "text",
+      "value": "News and publications"
+    },
+    {
+      "key": "index-text-036",
+      "page": "index",
+      "label": "Scholarship & Opportunities",
+      "kind": "text",
+      "value": "Scholarship & Opportunities"
+    },
+    {
+      "key": "index-text-037",
+      "page": "index",
+      "label": "Scholarships, fellowships and opportunities",
+      "kind": "text",
+      "value": "Scholarships, fellowships and opportunities"
+    },
+    {
+      "key": "index-text-038",
+      "page": "index",
+      "label": "Explore widely available scholarships, fellowships, internships, grants and other academic and professional opportunities for students, graduates and early-career researchers.",
+      "kind": "text",
+      "value": "Explore widely available scholarships, fellowships, internships, grants\n              and other academic and professional opportunities for students,\n              graduates and early-career researchers."
+    },
+    {
+      "key": "index-link-039",
+      "page": "index",
+      "label": "publications.php#scholarship-opportunities",
+      "kind": "link",
+      "value": "publications.php#scholarship-opportunities"
+    },
+    {
+      "key": "index-text-040",
+      "page": "index",
+      "label": "Explore opportunities →",
+      "kind": "text",
+      "value": "Explore opportunities →"
+    },
+    {
+      "key": "index-text-041",
+      "page": "index",
+      "label": "Blogs",
+      "kind": "text",
+      "value": "Blogs"
+    },
+    {
+      "key": "index-text-042",
+      "page": "index",
+      "label": "Ideas, perspectives and emerging issues",
+      "kind": "text",
+      "value": "Ideas, perspectives and emerging issues"
+    },
+    {
+      "key": "index-text-043",
+      "page": "index",
+      "label": "Read articles, reflections and informed perspectives from researchers and professionals on topics related to research, mentorship, innovation and community development.",
+      "kind": "text",
+      "value": "Read articles, reflections and informed perspectives from researchers\n              and professionals on topics related to research, mentorship,\n              innovation and community development."
+    },
+    {
+      "key": "index-link-044",
+      "page": "index",
+      "label": "publications.php#blogs",
+      "kind": "link",
+      "value": "publications.php#blogs"
+    },
+    {
+      "key": "index-text-045",
+      "page": "index",
+      "label": "Read our blogs →",
+      "kind": "text",
+      "value": "Read our blogs →"
+    },
+    {
+      "key": "index-text-046",
+      "page": "index",
+      "label": "Newsletters",
+      "kind": "text",
+      "value": "Newsletters"
+    },
+    {
+      "key": "index-text-047",
+      "page": "index",
+      "label": "EA Research Group news and updates",
+      "kind": "text",
+      "value": "EA Research Group news and updates"
+    },
+    {
+      "key": "index-text-048",
+      "page": "index",
+      "label": "Follow updates on our programmes, partnerships, events, opportunities, research activities and institutional development.",
+      "kind": "text",
+      "value": "Follow updates on our programmes, partnerships, events, opportunities,\n              research activities and institutional development."
+    },
+    {
+      "key": "index-link-049",
+      "page": "index",
+      "label": "publications.php#newsletters",
+      "kind": "link",
+      "value": "publications.php#newsletters"
+    },
+    {
+      "key": "index-text-050",
+      "page": "index",
+      "label": "Read our newsletters →",
+      "kind": "text",
+      "value": "Read our newsletters →"
+    },
+    {
+      "key": "index-text-051",
+      "page": "index",
+      "label": "Stay connected",
+      "kind": "text",
+      "value": "Stay connected"
+    },
+    {
+      "key": "index-text-052",
+      "page": "index",
+      "label": "Subscribe to our newsletter",
+      "kind": "text",
+      "value": "Subscribe to our newsletter"
+    },
+    {
+      "key": "index-text-053",
+      "page": "index",
+      "label": "Receive updates on mentorship opportunities, programs, publications, events and research activities.",
+      "kind": "text",
+      "value": "Receive updates on mentorship opportunities, programs, publications,\n            events and research activities."
+    },
+    {
+      "key": "index-text-054",
+      "page": "index",
+      "label": "Subscribe",
+      "kind": "text",
+      "value": "Subscribe"
+    },
+    {
+      "key": "programs-text-001",
+      "page": "programs",
+      "label": "Publications | EA Research Group",
+      "kind": "text",
+      "value": "Publications | EA Research Group"
+    },
+    {
+      "key": "programs-text-002",
+      "page": "programs",
+      "label": "Blogs",
+      "kind": "text",
+      "value": "Blogs"
+    },
+    {
+      "key": "programs-text-003",
+      "page": "programs",
+      "label": "Ideas, perspectives and emerging issues",
+      "kind": "text",
+      "value": "Ideas, perspectives and emerging issues"
+    },
+    {
+      "key": "programs-text-004",
+      "page": "programs",
+      "label": "Read articles, reflections and informed perspectives from researchers, professionals and contributors on topics related to research, mentorship, innovation and community developmen",
+      "kind": "text",
+      "value": "Read articles, reflections and informed perspectives from researchers,\n              professionals and contributors on topics related to research, mentorship,\n              innovation and community development."
+    },
+    {
+      "key": "programs-text-005",
+      "page": "programs",
+      "label": "Research and development perspectives",
+      "kind": "text",
+      "value": "Research and development perspectives"
+    },
+    {
+      "key": "programs-text-006",
+      "page": "programs",
+      "label": "Reflections on how research can respond to community needs, development priorities and emerging social challenges.",
+      "kind": "text",
+      "value": "Reflections on how research can respond to community needs,\n                development priorities and emerging social challenges."
+    },
+    {
+      "key": "programs-text-007",
+      "page": "programs",
+      "label": "Mentorship and academic growth",
+      "kind": "text",
+      "value": "Mentorship and academic growth"
+    },
+    {
+      "key": "programs-text-008",
+      "page": "programs",
+      "label": "Writings on student mentorship, postgraduate preparation, research culture and early-career development.",
+      "kind": "text",
+      "value": "Writings on student mentorship, postgraduate preparation,\n                research culture and early-career development."
+    },
+    {
+      "key": "programs-text-009",
+      "page": "programs",
+      "label": "Innovation and impact",
+      "kind": "text",
+      "value": "Innovation and impact"
+    },
+    {
+      "key": "programs-text-010",
+      "page": "programs",
+      "label": "Articles on practical innovation, institutional growth and how ideas can be translated into measurable social impact.",
+      "kind": "text",
+      "value": "Articles on practical innovation, institutional growth and how ideas\n                can be translated into measurable social impact."
+    },
+    {
+      "key": "programs-text-011",
+      "page": "programs",
+      "label": "Trending issues",
+      "kind": "text",
+      "value": "Trending issues"
+    },
+    {
+      "key": "programs-text-012",
+      "page": "programs",
+      "label": "Commentary on relevant trends connected to education, research, policy, science and community development.",
+      "kind": "text",
+      "value": "Commentary on relevant trends connected to education, research,\n                policy, science and community development."
+    },
+    {
+      "key": "programs-text-013",
+      "page": "programs",
+      "label": "Newsletters",
+      "kind": "text",
+      "value": "Newsletters"
+    },
+    {
+      "key": "programs-text-014",
+      "page": "programs",
+      "label": "EA Research Group news and updates",
+      "kind": "text",
+      "value": "EA Research Group news and updates"
+    },
+    {
+      "key": "programs-text-015",
+      "page": "programs",
+      "label": "Follow updates on our programmes, partnerships, events, opportunities, research activities and institutional development.",
+      "kind": "text",
+      "value": "Follow updates on our programmes, partnerships, events, opportunities,\n              research activities and institutional development."
+    },
+    {
+      "key": "programs-text-016",
+      "page": "programs",
+      "label": "Monthly updates",
+      "kind": "text",
+      "value": "Monthly updates"
+    },
+    {
+      "key": "programs-text-017",
+      "page": "programs",
+      "label": "Updates on EARG activities, organisational development and programme progress.",
+      "kind": "text",
+      "value": "Updates on EARG activities, organisational development and programme\n                progress."
+    },
+    {
+      "key": "programs-text-018",
+      "page": "programs",
+      "label": "Opportunities round-up",
+      "kind": "text",
+      "value": "Opportunities round-up"
+    },
+    {
+      "key": "programs-text-019",
+      "page": "programs",
+      "label": "A curated summary of selected scholarships, fellowships, internships and academic opportunities.",
+      "kind": "text",
+      "value": "A curated summary of selected scholarships, fellowships, internships\n                and academic opportunities."
+    },
+    {
+      "key": "programs-text-020",
+      "page": "programs",
+      "label": "Programme highlights",
+      "kind": "text",
+      "value": "Programme highlights"
+    },
+    {
+      "key": "programs-text-021",
+      "page": "programs",
+      "label": "Highlights from mentorship activities, research capacity programmes and community-focused initiatives.",
+      "kind": "text",
+      "value": "Highlights from mentorship activities, research capacity programmes\n                and community-focused initiatives."
+    },
+    {
+      "key": "programs-text-022",
+      "page": "programs",
+      "label": "Upcoming activities",
+      "kind": "text",
+      "value": "Upcoming activities"
+    },
+    {
+      "key": "programs-text-023",
+      "page": "programs",
+      "label": "Notices on upcoming calls, events, meetings, training sessions and other important dates.",
+      "kind": "text",
+      "value": "Notices on upcoming calls, events, meetings, training sessions and\n                other important dates."
+    },
+    {
+      "key": "programs-text-024",
+      "page": "programs",
+      "label": "Reports",
+      "kind": "text",
+      "value": "Reports"
+    },
+    {
+      "key": "programs-text-025",
+      "page": "programs",
+      "label": "Reports, briefs and institutional publications",
+      "kind": "text",
+      "value": "Reports, briefs and institutional publications"
+    },
+    {
+      "key": "programs-text-026",
+      "page": "programs",
+      "label": "Access research reports, annual reports, financial reports, policy briefs and other institutional publications from EA Research Group.",
+      "kind": "text",
+      "value": "Access research reports, annual reports, financial reports, policy\n              briefs and other institutional publications from EA Research Group."
+    },
+    {
+      "key": "programs-text-027",
+      "page": "programs",
+      "label": "Research reports",
+      "kind": "text",
+      "value": "Research reports"
+    },
+    {
+      "key": "programs-text-028",
+      "page": "programs",
+      "label": "Reports from research projects, field activities, needs assessments and evidence-gathering work.",
+      "kind": "text",
+      "value": "Reports from research projects, field activities, needs assessments\n                and evidence-gathering work."
+    },
+    {
+      "key": "programs-text-029",
+      "page": "programs",
+      "label": "Annual reports",
+      "kind": "text",
+      "value": "Annual reports"
+    },
+    {
+      "key": "programs-text-030",
+      "page": "programs",
+      "label": "Yearly summaries of EARG activities, achievements, partnerships and institutional progress.",
+      "kind": "text",
+      "value": "Yearly summaries of EARG activities, achievements, partnerships and\n                institutional progress."
+    },
+    {
+      "key": "programs-text-031",
+      "page": "programs",
+      "label": "Financial reports",
+      "kind": "text",
+      "value": "Financial reports"
+    },
+    {
+      "key": "programs-text-032",
+      "page": "programs",
+      "label": "Financial accountability documents, summaries and reports prepared for transparency and institutional reporting.",
+      "kind": "text",
+      "value": "Financial accountability documents, summaries and reports prepared\n                for transparency and institutional reporting."
+    },
+    {
+      "key": "programs-text-033",
+      "page": "programs",
+      "label": "Policy and learning briefs",
+      "kind": "text",
+      "value": "Policy and learning briefs"
+    },
+    {
+      "key": "programs-text-034",
+      "page": "programs",
+      "label": "Short publications that communicate lessons, recommendations and insights from research or programme work.",
+      "kind": "text",
+      "value": "Short publications that communicate lessons, recommendations and\n                insights from research or programme work."
+    },
+    {
+      "key": "programs-text-035",
+      "page": "programs",
+      "label": "Scholarship & Opportunities",
+      "kind": "text",
+      "value": "Scholarship & Opportunities"
+    },
+    {
+      "key": "programs-text-036",
+      "page": "programs",
+      "label": "Scholarships, fellowships, internships and research opportunities",
+      "kind": "text",
+      "value": "Scholarships, fellowships, internships and research opportunities"
+    },
+    {
+      "key": "programs-text-037",
+      "page": "programs",
+      "label": "Explore widely available scholarships, fellowships, internships, grants, conferences, trainings and other academic or professional opportunities for students, graduates and early-c",
+      "kind": "text",
+      "value": "Explore widely available scholarships, fellowships, internships, grants,\n              conferences, trainings and other academic or professional opportunities\n              for students, graduates and early-career researchers."
+    },
+    {
+      "key": "programs-text-038",
+      "page": "programs",
+      "label": "Scholarships",
+      "kind": "text",
+      "value": "Scholarships"
+    },
+    {
+      "key": "programs-text-039",
+      "page": "programs",
+      "label": "Undergraduate, postgraduate and research-focused scholarship opportunities from institutions and funding bodies.",
+      "kind": "text",
+      "value": "Undergraduate, postgraduate and research-focused scholarship\n                opportunities from institutions and funding bodies."
+    },
+    {
+      "key": "programs-text-040",
+      "page": "programs",
+      "label": "Fellowships",
+      "kind": "text",
+      "value": "Fellowships"
+    },
+    {
+      "key": "programs-text-041",
+      "page": "programs",
+      "label": "Fellowship opportunities for students, graduates, researchers and early-career professionals.",
+      "kind": "text",
+      "value": "Fellowship opportunities for students, graduates, researchers and\n                early-career professionals."
+    },
+    {
+      "key": "programs-text-042",
+      "page": "programs",
+      "label": "Internships and training",
+      "kind": "text",
+      "value": "Internships and training"
+    },
+    {
+      "key": "programs-text-043",
+      "page": "programs",
+      "label": "Internship, training, summer school and capacity-building opportunities relevant to young researchers.",
+      "kind": "text",
+      "value": "Internship, training, summer school and capacity-building\n                opportunities relevant to young researchers."
+    },
+    {
+      "key": "programs-text-044",
+      "page": "programs",
+      "label": "Grants and calls",
+      "kind": "text",
+      "value": "Grants and calls"
+    },
+    {
+      "key": "programs-text-045",
+      "page": "programs",
+      "label": "Calls for applications, research grants, conferences, workshops and other academic opportunities.",
+      "kind": "text",
+      "value": "Calls for applications, research grants, conferences, workshops and\n                other academic opportunities."
+    },
+    {
+      "key": "publications-text-001",
+      "page": "publications",
+      "label": "Publications | EA Research Group",
+      "kind": "text",
+      "value": "Publications | EA Research Group"
+    },
+    {
+      "key": "publications-text-002",
+      "page": "publications",
+      "label": "Blogs",
+      "kind": "text",
+      "value": "Blogs"
+    },
+    {
+      "key": "publications-text-003",
+      "page": "publications",
+      "label": "Read articles, reflections and informed perspectives from researchers, professionals and contributors on research, mentorship, innovation and community development.",
+      "kind": "text",
+      "value": "Read articles, reflections and informed perspectives from researchers,\n              professionals and contributors on research, mentorship, innovation and\n              community development."
+    },
+    {
+      "key": "publications-text-004",
+      "page": "publications",
+      "label": "Loading blogs...",
+      "kind": "text",
+      "value": "Loading blogs..."
+    },
+    {
+      "key": "publications-text-005",
+      "page": "publications",
+      "label": "Unable to load blogs",
+      "kind": "text",
+      "value": "Unable to load blogs"
+    },
+    {
+      "key": "publications-text-006",
+      "page": "publications",
+      "label": "We could not retrieve the blogs at this time. Please try again later.",
+      "kind": "text",
+      "value": "We could not retrieve the blogs at this time. Please try again later."
+    },
+    {
+      "key": "publications-text-007",
+      "page": "publications",
+      "label": "No blogs available",
+      "kind": "text",
+      "value": "No blogs available"
+    },
+    {
+      "key": "publications-text-008",
+      "page": "publications",
+      "label": "There are currently no published blog posts.",
+      "kind": "text",
+      "value": "There are currently no published blog posts."
+    },
+    {
+      "key": "publications-text-009",
+      "page": "publications",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "publications-text-010",
+      "page": "publications",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "publications-text-011",
+      "page": "publications",
+      "label": "Newsletters",
+      "kind": "text",
+      "value": "Newsletters"
+    },
+    {
+      "key": "publications-text-012",
+      "page": "publications",
+      "label": "Follow updates on our programmes, partnerships, events, opportunities, research activities and institutional development.",
+      "kind": "text",
+      "value": "Follow updates on our programmes, partnerships, events, opportunities,\n              research activities and institutional development."
+    },
+    {
+      "key": "publications-text-013",
+      "page": "publications",
+      "label": "Loading newsletters...",
+      "kind": "text",
+      "value": "Loading newsletters..."
+    },
+    {
+      "key": "publications-text-014",
+      "page": "publications",
+      "label": "Unable to load newsletters",
+      "kind": "text",
+      "value": "Unable to load newsletters"
+    },
+    {
+      "key": "publications-text-015",
+      "page": "publications",
+      "label": "We could not retrieve the newsletters at this time. Please try again later.",
+      "kind": "text",
+      "value": "We could not retrieve the newsletters at this time. Please try again later."
+    },
+    {
+      "key": "publications-text-016",
+      "page": "publications",
+      "label": "No newsletters available",
+      "kind": "text",
+      "value": "No newsletters available"
+    },
+    {
+      "key": "publications-text-017",
+      "page": "publications",
+      "label": "There are currently no published newsletters.",
+      "kind": "text",
+      "value": "There are currently no published newsletters."
+    },
+    {
+      "key": "publications-text-018",
+      "page": "publications",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "publications-text-019",
+      "page": "publications",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "publications-text-020",
+      "page": "publications",
+      "label": "Reports",
+      "kind": "text",
+      "value": "Reports"
+    },
+    {
+      "key": "publications-text-021",
+      "page": "publications",
+      "label": "Access research reports, annual reports, financial reports, policy briefs and other institutional publications from EA Research Group.",
+      "kind": "text",
+      "value": "Access research reports, annual reports, financial reports, policy\n              briefs and other institutional publications from EA Research Group."
+    },
+    {
+      "key": "publications-text-022",
+      "page": "publications",
+      "label": "Loading reports...",
+      "kind": "text",
+      "value": "Loading reports..."
+    },
+    {
+      "key": "publications-text-023",
+      "page": "publications",
+      "label": "Unable to load reports",
+      "kind": "text",
+      "value": "Unable to load reports"
+    },
+    {
+      "key": "publications-text-024",
+      "page": "publications",
+      "label": "We could not retrieve the reports at this time. Please try again later.",
+      "kind": "text",
+      "value": "We could not retrieve the reports at this time. Please try again later."
+    },
+    {
+      "key": "publications-text-025",
+      "page": "publications",
+      "label": "No reports available",
+      "kind": "text",
+      "value": "No reports available"
+    },
+    {
+      "key": "publications-text-026",
+      "page": "publications",
+      "label": "There are currently no published reports.",
+      "kind": "text",
+      "value": "There are currently no published reports."
+    },
+    {
+      "key": "publications-text-027",
+      "page": "publications",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "publications-text-028",
+      "page": "publications",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "publications-text-029",
+      "page": "publications",
+      "label": "Scholarship & Opportunities",
+      "kind": "text",
+      "value": "Scholarship & Opportunities"
+    },
+    {
+      "key": "publications-text-030",
+      "page": "publications",
+      "label": "Explore widely available scholarships, fellowships, internships, grants, conferences, trainings and other academic or professional opportunities for students, graduates and early-c",
+      "kind": "text",
+      "value": "Explore widely available scholarships, fellowships, internships, grants,\n              conferences, trainings and other academic or professional opportunities\n              for students, graduates and early-career researchers."
+    },
+    {
+      "key": "publications-text-031",
+      "page": "publications",
+      "label": "Loading opportunities...",
+      "kind": "text",
+      "value": "Loading opportunities..."
+    },
+    {
+      "key": "publications-text-032",
+      "page": "publications",
+      "label": "Unable to load opportunities",
+      "kind": "text",
+      "value": "Unable to load opportunities"
+    },
+    {
+      "key": "publications-text-033",
+      "page": "publications",
+      "label": "We could not retrieve the opportunities at this time. Please try again later.",
+      "kind": "text",
+      "value": "We could not retrieve the opportunities at this time. Please try again later."
+    },
+    {
+      "key": "publications-text-034",
+      "page": "publications",
+      "label": "No opportunities available",
+      "kind": "text",
+      "value": "No opportunities available"
+    },
+    {
+      "key": "publications-text-035",
+      "page": "publications",
+      "label": "There are currently no published opportunities. Please check again soon.",
+      "kind": "text",
+      "value": "There are currently no published opportunities. Please check again soon."
+    },
+    {
+      "key": "publications-text-036",
+      "page": "publications",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "publications-text-037",
+      "page": "publications",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "events-text-001",
+      "page": "events",
+      "label": "Events | EA Research Group",
+      "kind": "text",
+      "value": "Events | EA Research Group"
+    },
+    {
+      "key": "events-text-003",
+      "page": "events",
+      "label": "·",
+      "kind": "text",
+      "value": "·"
+    },
+    {
+      "key": "events-text-005",
+      "page": "events",
+      "label": "Register",
+      "kind": "text",
+      "value": "Register"
+    },
+    {
+      "key": "header-link-001",
+      "page": "header",
+      "label": "index.php",
+      "kind": "link",
+      "value": "index.php"
+    },
+    {
+      "key": "header-image-002",
+      "page": "header",
+      "label": "assets/images/earg-logo-transparent.png",
+      "kind": "image",
+      "value": "assets/images/earg-logo-transparent.png"
+    },
+    {
+      "key": "header-text-003",
+      "page": "header",
+      "label": "EA Research Group",
+      "kind": "text",
+      "value": "EA Research Group"
+    },
+    {
+      "key": "header-text-004",
+      "page": "header",
+      "label": "Research • Mentorship • Innovation • Impact",
+      "kind": "text",
+      "value": "Research • Mentorship • Innovation • Impact"
+    },
+    {
+      "key": "footer-image-001",
+      "page": "footer",
+      "label": "assets/images/earg-logo-transparent.png",
+      "kind": "image",
+      "value": "assets/images/earg-logo-transparent.png"
+    },
+    {
+      "key": "footer-text-002",
+      "page": "footer",
+      "label": "Effective Altruist Research Group is a non-profit research and academic development organization advancing research, mentorship, innovation and impact.",
+      "kind": "text",
+      "value": "Effective Altruist Research Group is a non-profit research and academic\n                development organization advancing research, mentorship, innovation and impact."
+    },
+    {
+      "key": "footer-text-003",
+      "page": "footer",
+      "label": "Quick Links",
+      "kind": "text",
+      "value": "Quick Links"
+    },
+    {
+      "key": "footer-text-004",
+      "page": "footer",
+      "label": "Find Us",
+      "kind": "text",
+      "value": "Find Us"
+    },
+    {
+      "key": "footer-text-006",
+      "page": "footer",
+      "label": "Follow Us",
+      "kind": "text",
+      "value": "Follow Us"
+    },
+    {
+      "key": "footer-text-007",
+      "page": "footer",
+      "label": "©",
+      "kind": "text",
+      "value": "©"
+    },
+    {
+      "key": "footer-text-008",
+      "page": "footer",
+      "label": "EA Research Group. All rights reserved.",
+      "kind": "text",
+      "value": "EA Research Group. All rights reserved."
+    },
+    {
+      "key": "publication-text-001",
+      "page": "publication",
+      "label": "| EA Research Group",
+      "kind": "text",
+      "value": "| EA Research Group"
+    },
+    {
+      "key": "publication-link-002",
+      "page": "publication",
+      "label": "publications.php",
+      "kind": "link",
+      "value": "publications.php"
+    },
+    {
+      "key": "publication-text-003",
+      "page": "publication",
+      "label": "← Back to publications",
+      "kind": "text",
+      "value": "← Back to publications"
+    },
+    {
+      "key": "publication-text-004",
+      "page": "publication",
+      "label": "Featured",
+      "kind": "text",
+      "value": "Featured"
+    },
+    {
+      "key": "publication-text-005",
+      "page": "publication",
+      "label": "Publication type",
+      "kind": "text",
+      "value": "Publication type"
+    },
+    {
+      "key": "publication-text-006",
+      "page": "publication",
+      "label": "Publication date",
+      "kind": "text",
+      "value": "Publication date"
+    },
+    {
+      "key": "publication-text-007",
+      "page": "publication",
+      "label": "Author",
+      "kind": "text",
+      "value": "Author"
+    },
+    {
+      "key": "publication-text-011",
+      "page": "publication",
+      "label": "Open document",
+      "kind": "text",
+      "value": "Open document"
+    },
+    {
+      "key": "publication-text-012",
+      "page": "publication",
+      "label": "Images",
+      "kind": "text",
+      "value": "Images"
+    },
+    {
+      "key": "publication-text-015",
+      "page": "publication",
+      "label": "Publication not found",
+      "kind": "text",
+      "value": "Publication not found"
+    },
+    {
+      "key": "publication-text-016",
+      "page": "publication",
+      "label": "×",
+      "kind": "text",
+      "value": "×"
+    },
+    {
+      "key": "publication-text-017",
+      "page": "publication",
+      "label": "‹",
+      "kind": "text",
+      "value": "‹"
+    },
+    {
+      "key": "publication-text-018",
+      "page": "publication",
+      "label": "›",
+      "kind": "text",
+      "value": "›"
+    },
+    {
+      "key": "publication-image-019",
+      "page": "publication",
+      "label": "publication-image-019",
+      "kind": "image",
+      "value": ""
+    },
+    {
+      "key": "opportunity-link-001",
+      "page": "opportunity",
+      "label": "publications.php#scholarship-opportunities",
+      "kind": "link",
+      "value": "publications.php#scholarship-opportunities"
+    },
+    {
+      "key": "opportunity-text-002",
+      "page": "opportunity",
+      "label": "← Back to opportunities",
+      "kind": "text",
+      "value": "← Back to opportunities"
+    },
+    {
+      "key": "opportunity-text-003",
+      "page": "opportunity",
+      "label": "Featured",
+      "kind": "text",
+      "value": "Featured"
+    },
+    {
+      "key": "opportunity-text-004",
+      "page": "opportunity",
+      "label": "Status",
+      "kind": "text",
+      "value": "Status"
+    },
+    {
+      "key": "opportunity-text-005",
+      "page": "opportunity",
+      "label": "Deadline",
+      "kind": "text",
+      "value": "Deadline"
+    },
+    {
+      "key": "opportunity-text-006",
+      "page": "opportunity",
+      "label": "Country",
+      "kind": "text",
+      "value": "Country"
+    },
+    {
+      "key": "opportunity-text-007",
+      "page": "opportunity",
+      "label": "Host organization",
+      "kind": "text",
+      "value": "Host organization"
+    },
+    {
+      "key": "opportunity-text-009",
+      "page": "opportunity",
+      "label": "Visit application page",
+      "kind": "text",
+      "value": "Visit application page"
+    },
+    {
+      "key": "opportunity-text-010",
+      "page": "opportunity",
+      "label": "Opportunity not found",
+      "kind": "text",
+      "value": "Opportunity not found"
+    },
+    {
+      "key": "founder-story-text-001",
+      "page": "founder-story",
+      "label": "Founder's Story | EA Research Group",
+      "kind": "text",
+      "value": "Founder's Story | EA Research Group"
+    },
+    {
+      "key": "founder-story-text-002",
+      "page": "founder-story",
+      "label": "Founder's Story",
+      "kind": "text",
+      "value": "Founder's Story"
+    },
+    {
+      "key": "founder-story-text-004",
+      "page": "founder-story",
+      "label": "Founder story not available",
+      "kind": "text",
+      "value": "Founder story not available"
+    },
+    {
+      "key": "survey-text-001",
+      "page": "survey",
+      "label": "Mentorship & Career Readiness Survey | EA Research Group",
+      "kind": "text",
+      "value": "Mentorship & Career Readiness Survey | EA Research Group"
+    },
+    {
+      "key": "survey-text-002",
+      "page": "survey",
+      "label": "Thank you!",
+      "kind": "text",
+      "value": "Thank you!"
+    },
+    {
+      "key": "survey-text-003",
+      "page": "survey",
+      "label": "Your response has been recorded. We really appreciate you taking the time to help.",
+      "kind": "text",
+      "value": "Your response has been recorded. We really appreciate you taking the time to help."
+    },
+    {
+      "key": "survey-text-004",
+      "page": "survey",
+      "label": "It looks like you have already submitted a response from this browser. Thank you!",
+      "kind": "text",
+      "value": "It looks like you have already submitted a response from this browser. Thank you!"
+    },
+    {
+      "key": "survey-text-005",
+      "page": "survey",
+      "label": "\">",
+      "kind": "text",
+      "value": "\">"
+    },
+    {
+      "key": "survey-text-006",
+      "page": "survey",
+      "label": "Website",
+      "kind": "text",
+      "value": "Website"
+    },
+    {
+      "key": "survey-text-007",
+      "page": "survey",
+      "label": "*",
+      "kind": "text",
+      "value": "*"
+    },
+    {
+      "key": "survey-text-008",
+      "page": "survey",
+      "label": "Required",
+      "kind": "text",
+      "value": "Required"
+    },
+    {
+      "key": "survey-text-009",
+      "page": "survey",
+      "label": ".",
+      "kind": "text",
+      "value": "."
+    },
+    {
+      "key": "survey-text-010",
+      "page": "survey",
+      "label": "*",
+      "kind": "text",
+      "value": "*"
+    },
+    {
+      "key": "survey-text-011",
+      "page": "survey",
+      "label": "Submit response",
+      "kind": "text",
+      "value": "Submit response"
+    },
+    {
+      "key": "survey-text-012",
+      "page": "survey",
+      "label": "Please enable JavaScript to complete and submit this survey.",
+      "kind": "text",
+      "value": "Please enable JavaScript to complete and submit this survey."
+    },
+    {
+      "key": "publications-meta-description",
+      "page": "publications",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "EA Research Group blogs, newsletters, reports, scholarships and opportunities."
+    },
+    {
+      "key": "index-meta-description",
+      "page": "index",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "Effective Altruist Research Group is a non-profit research and academic development organization based in Tamale, Ghana."
+    },
+    {
+      "key": "programs-meta-description",
+      "page": "programs",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "EA Research Group blogs, newsletters, reports, scholarships and opportunities."
+    },
+    {
+      "key": "about-meta-description",
+      "page": "about",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "Learn about Effective Altruist Research Group, its mission, vision, governing board, advisory board, executive team and contact information."
+    },
+    {
+      "key": "events-meta-description",
+      "page": "events",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "EA Research Group events page placeholder."
+    },
+    {
+      "key": "survey-meta-description",
+      "page": "survey",
+      "label": "Search engine description",
+      "kind": "text",
+      "value": "A short voluntary survey for final-year students and recent graduates in Northern Ghana about mentorship, postgraduate education and job-market readiness."
+    }
+  ],
+  "people": [
+    {
+      "name": "Dr. Jacob Achumboro Ayang",
+      "role": "Board Chair",
+      "section": "board",
+      "order": 0,
+      "photo_path": "assets/images/Jacob.png",
+      "photo_id": "jacob-img"
+    },
+    {
+      "name": "Lucky Adeline Aanomah",
+      "role": "Deputy Chair",
+      "section": "board",
+      "order": 1,
+      "photo_path": "assets/images/lucky.png",
+      "photo_id": "lucky-img"
+    },
+    {
+      "name": "Sandra Sore",
+      "role": "Secretary",
+      "section": "board",
+      "order": 2,
+      "photo_path": "assets/images/sandra.png",
+      "photo_id": "sandra-img"
+    },
+    {
+      "name": "Emmanuel Adom",
+      "role": "Member",
+      "section": "board",
+      "order": 3,
+      "photo_path": "assets/images/Emma.jpg",
+      "photo_id": "emma-img"
+    },
+    {
+      "name": "Nana Okai Ankomah",
+      "role": "Member",
+      "section": "board",
+      "order": 4,
+      "photo_path": "assets/images/nana2.png",
+      "photo_id": "nana-img"
+    },
+    {
+      "name": "Emmanuel Adom",
+      "role": "Executive Director",
+      "section": "team",
+      "order": 0,
+      "photo_path": "assets/images/Emma.jpg",
+      "photo_id": "emma-img"
+    },
+    {
+      "name": "Abdul Kahar Abdul Rahman Gunu",
+      "role": "Operations Officer",
+      "section": "team",
+      "order": 1,
+      "photo_path": "assets/images/kahar.jpg",
+      "photo_id": "nana-img"
+    },
+    {
+      "name": "Nana Ankomah",
+      "role": "Digital and Communications Lead",
+      "section": "team",
+      "order": 2,
+      "photo_path": "assets/images/nana2.png",
+      "photo_id": "nana-img"
+    }
+  ],
+  "heroes": [
+    {
+      "_comment": "Hero slider images. Array order = slide order; the first entry is shown first and starts as the active slide. 'position' is the CSS background-position. The EA logo slide below was added as the opening slide.",
+      "src": "assets/images/hero_images/ea-logo-green.jpg",
+      "position": "center 45%"
+    },
+    {
+      "src": "assets/images/hero_images/image1.jpg",
+      "position": "center 45%"
+    },
+    {
+      "src": "assets/images/hero_images/image2.jpg",
+      "position": "center 20%"
+    },
+    {
+      "src": "assets/images/hero_images/stake-holders6.jpg",
+      "position": "center center"
+    },
+    {
+      "src": "assets/images/hero_images/image3.jpg",
+      "position": "center 20%"
+    },
+    {
+      "src": "assets/images/hero_images/stake-holders2.jpg",
+      "position": "center center"
+    },
+    {
+      "src": "assets/images/hero_images/stake-holders3.jpg",
+      "position": "center 30%"
+    },
+    {
+      "src": "assets/images/hero_images/stake-holders5.jpg",
+      "position": "center 28%"
+    },
+    {
+      "src": "assets/images/hero_images/stake-holders4.jpg",
+      "position": "center 30%"
+    }
+  ],
+  "menus": [
+    {
+      "id": 1,
+      "location": "header",
+      "label": "Home",
+      "url": "index.php",
+      "parent": null,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "location": "header",
+      "label": "About Us",
+      "url": "",
+      "parent": null,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "location": "header",
+      "label": "Who We Are",
+      "url": "about.php#who-we-are",
+      "parent": 2,
+      "order": 3,
+      "route": "who-we-are"
+    },
+    {
+      "id": 4,
+      "location": "footer",
+      "label": "Who We Are",
+      "url": "about.php#who-we-are",
+      "parent": null,
+      "order": 4,
+      "route": "who-we-are"
+    },
+    {
+      "id": 5,
+      "location": "header",
+      "label": "Governing Board",
+      "url": "about.php#governing-board",
+      "parent": 2,
+      "order": 5,
+      "route": "governing-board"
+    },
+    {
+      "id": 6,
+      "location": "footer",
+      "label": "Governing Board",
+      "url": "about.php#governing-board",
+      "parent": null,
+      "order": 6,
+      "route": "governing-board"
+    },
+    {
+      "id": 7,
+      "location": "header",
+      "label": "Our Team",
+      "url": "about.php#our-team",
+      "parent": 2,
+      "order": 7,
+      "route": "our-team"
+    },
+    {
+      "id": 8,
+      "location": "footer",
+      "label": "Our Team",
+      "url": "about.php#our-team",
+      "parent": null,
+      "order": 8,
+      "route": "our-team"
+    },
+    {
+      "id": 9,
+      "location": "header",
+      "label": "Founder's Story",
+      "url": "founder-story.php",
+      "parent": 2,
+      "order": 9,
+      "route": ""
+    },
+    {
+      "id": 10,
+      "location": "footer",
+      "label": "Founder's Story",
+      "url": "founder-story.php",
+      "parent": null,
+      "order": 10,
+      "route": ""
+    },
+    {
+      "id": 11,
+      "location": "header",
+      "label": "Contact Us",
+      "url": "about.php#contact-us",
+      "parent": 2,
+      "order": 11,
+      "route": "contact-us"
+    },
+    {
+      "id": 12,
+      "location": "footer",
+      "label": "Contact Us",
+      "url": "about.php#contact-us",
+      "parent": null,
+      "order": 12,
+      "route": "contact-us"
+    },
+    {
+      "id": 13,
+      "location": "header",
+      "label": "Programs",
+      "url": "",
+      "parent": null,
+      "order": 13
+    },
+    {
+      "id": 14,
+      "location": "header",
+      "label": "Mentorship and Fellowship",
+      "url": "#",
+      "parent": 13,
+      "order": 14,
+      "is_disabled": true
+    },
+    {
+      "id": 15,
+      "location": "header",
+      "label": "Research Capacity",
+      "url": "#",
+      "parent": 13,
+      "order": 15,
+      "is_disabled": true
+    },
+    {
+      "id": 16,
+      "location": "header",
+      "label": "Community Research",
+      "url": "#",
+      "parent": 13,
+      "order": 16,
+      "is_disabled": true
+    },
+    {
+      "id": 17,
+      "location": "header",
+      "label": "Consultancy and Partnerships",
+      "url": "#",
+      "parent": 13,
+      "order": 17,
+      "is_disabled": true
+    },
+    {
+      "id": 18,
+      "location": "header",
+      "label": "Publications",
+      "url": "",
+      "parent": null,
+      "order": 18
+    },
+    {
+      "id": 19,
+      "location": "header",
+      "label": "Blogs",
+      "url": "publications.php#blogs",
+      "parent": 18,
+      "order": 19,
+      "route": "blogs"
+    },
+    {
+      "id": 20,
+      "location": "header",
+      "label": "Newsletters",
+      "url": "publications.php#newsletters",
+      "parent": 18,
+      "order": 20,
+      "route": "newsletters"
+    },
+    {
+      "id": 21,
+      "location": "header",
+      "label": "Reports",
+      "url": "publications.php#reports",
+      "parent": 18,
+      "order": 21,
+      "route": "reports"
+    },
+    {
+      "id": 22,
+      "location": "header",
+      "label": "Scholarship & Opportunities",
+      "url": "publications.php#scholarship-opportunities",
+      "parent": 18,
+      "order": 22,
+      "route": "scholarship-opportunities"
+    },
+    {
+      "id": 23,
+      "location": "header",
+      "label": "Events",
+      "url": "#",
+      "parent": null,
+      "order": 23,
+      "is_disabled": true
+    },
+    {
+      "id": 24,
+      "location": "social",
+      "label": "Facebook",
+      "url": "",
+      "parent": null,
+      "order": 24,
+      "is_disabled": true
+    },
+    {
+      "id": 25,
+      "location": "social",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/ea-research-group/",
+      "parent": null,
+      "order": 25,
+      "new_tab": true
+    },
+    {
+      "id": 26,
+      "location": "social",
+      "label": "YouTube",
+      "url": "https://youtube.com/@earesearchgrp24?si=FRm8RPLxO82BLVHR",
+      "parent": null,
+      "order": 26,
+      "new_tab": true
+    }
+  ],
+  "survey": {
+    "meta": {
+      "title": "Mentorship, Higher Education and Career Readiness Survey — Northern Ghana",
+      "subtitle": "University for Development Studies, Tamale - Ghana",
+      "description": "This short survey is for final-year students and recent graduates from Northern Ghana. It aims to understand access to mentorship and how mentorship may relate to motivation, readiness for postgraduate education, and job-market preparation. Participation is voluntary. Please do not include your name or other identifying details. Responses will be used to understand needs and plan possible support. Most people should complete this in about 3 minutes."
+    },
+    "questions": {
+      "q1": {
+        "number": 1,
+        "title": "What is your age group?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Under 20",
+          "20–24",
+          "25–29",
+          "30 or older",
+          "Prefer not to say"
+        ]
+      },
+      "q2": {
+        "number": 2,
+        "title": "Which part of Northern Ghana are you mainly from or based in?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Northern Region",
+          "Savannah Region",
+          "North East Region",
+          "Upper East Region",
+          "Upper West Region",
+          "Other / currently based elsewhere",
+          "Prefer not to say"
+        ]
+      },
+      "q3": {
+        "number": 3,
+        "title": "Which school or tertiary institution do/did you attend?",
+        "help": "Please enter the name of your current or most recently attended institution.",
+        "type": "text",
+        "required": true,
+        "maxlength": 200
+      },
+      "q4": {
+        "number": 4,
+        "title": "Which best describes your current status?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Final-year student",
+          "Recent graduate (graduated within the last 3 years)",
+          "Other student status"
+        ]
+      },
+      "q5": {
+        "number": 5,
+        "title": "What is your current or most recently completed level of education?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Certificate",
+          "Diploma / HND",
+          "Bachelor’s degree",
+          "Master’s degree",
+          "Other"
+        ]
+      },
+      "q6": {
+        "number": 6,
+        "title": "If you are currently doing a final-year or major research project, how difficult is it?",
+        "help": "Rate from 1 to 10, where 1 = not difficult at all and 10 = extremely difficult. Leave blank if this does not apply to you.",
+        "type": "scale",
+        "required": false,
+        "min": 1,
+        "max": 10,
+        "min_label": "Not difficult",
+        "max_label": "Extremely difficult"
+      },
+      "q7": {
+        "number": 7,
+        "title": "How much access have you had to useful mentorship for your education or career?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "No access to a mentor",
+          "I tried to find a mentor but could not",
+          "Very limited — one or two conversations",
+          "Occasional guidance when needed",
+          "Regular guidance from a mentor",
+          "Structured mentorship programme"
+        ]
+      },
+      "q8": {
+        "number": 8,
+        "title": "To what extent do you agree that mentorship can help people from Northern Ghana progress to postgraduate education and become job-market ready?",
+        "help": "Choose one response.",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Strongly disagree",
+          "Disagree",
+          "Neither agree nor disagree",
+          "Agree",
+          "Strongly agree"
+        ]
+      },
+      "q9": {
+        "number": 9,
+        "title": "Which best describes your postgraduate or further-education situation?",
+        "help": "",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Currently enrolled in postgraduate / further education",
+          "Applied and awaiting a decision",
+          "Plan or hope to apply, but have not yet applied",
+          "Would like to continue, but face barriers",
+          "Not currently interested in further education"
+        ]
+      },
+      "q10": {
+        "number": 10,
+        "title": "What kind of mentorship or support would be most useful to you?",
+        "help": "Select all that apply.",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Choosing a postgraduate programme or career path",
+          "Scholarship and funding opportunities",
+          "Preparing applications, CVs or personal statements",
+          "Research skills and final-year project support",
+          "Interview skills and job-search preparation",
+          "Networking and connecting with professionals",
+          "Confidence, motivation and goal setting",
+          "Other"
+        ]
+      },
+      "q11": {
+        "number": 11,
+        "title": "What are the main barriers you face in accessing postgraduate education or becoming job-ready?",
+        "help": "Select all that apply.",
+        "type": "checkbox",
+        "required": false,
+        "other": true,
+        "other_label": "Other (please specify)",
+        "other_maxlength": 300,
+        "options": [
+          "Limited information or guidance",
+          "Cost or lack of funding",
+          "Limited professional networks or contacts",
+          "Lack of confidence or motivation",
+          "Limited relevant experience or skills",
+          "Family, location or time constraints",
+          "No major barrier at present"
+        ]
+      },
+      "q12": {
+        "number": 12,
+        "title": "Is there one specific kind of mentorship or opportunity you wish you had access to?",
+        "help": "Optional.",
+        "type": "textarea",
+        "required": false,
+        "maxlength": 2000
+      },
+      "q13": {
+        "number": 13,
+        "title": "If an organisation offered voluntary mentorship and guidance to help people access postgraduate education and prepare for the job market, how would you feel about taking part?",
+        "help": "There is no right or wrong answer. Please choose the response that best reflects your current view.",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "I would definitely be interested",
+          "I would probably be interested",
+          "I am unsure and would need more information",
+          "I would probably not be interested",
+          "I would not be interested",
+          "It would depend on the type of support offered"
+        ]
+      }
+    }
+  }
+}

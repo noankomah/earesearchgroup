@@ -1,0 +1,328 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% editable 'about-text-001' %}</title>
+
+  <meta name="description" content="{% editable 'about-meta-description' %}" />
+
+  <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
+
+  <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".nav-dropdown");
+
+    dropdowns.forEach(function (dropdown) {
+      const parent = dropdown.querySelector(".nav-parent");
+
+      if (!parent) return;
+
+      parent.addEventListener("click", function (event) {
+        if (window.innerWidth > 1024) return;
+
+        event.preventDefault();
+
+        dropdowns.forEach(function (otherDropdown) {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove("is-open");
+          }
+        });
+
+        dropdown.classList.toggle("is-open");
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const routeLinks = document.querySelectorAll("[data-route-link]");
+    const mainNav = document.querySelector(".main-nav");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    routeLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 1024) {
+          /* Close the main mobile menu */
+          if (mainNav) {
+            mainNav.classList.remove("is-open");
+          }
+
+          /* Close any open dropdown */
+          document
+            .querySelectorAll(".nav-dropdown.is-open")
+            .forEach(function (dropdown) {
+              dropdown.classList.remove("is-open");
+            });
+
+          /* Reset the hamburger button */
+          if (menuToggle) {
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    });
+  });
+</script>
+<body>
+  <!-- HEADER -->
+  {% include "includes/navbar.html" %}
+
+  <main>
+
+    <!-- ROUTED PAGE CONTENT -->
+    <div class="about-route-wrap" id="aboutRouteWrap">
+
+      <!-- WHO WE ARE -->
+      <section class="about-route is-active" id="who-we-are" data-route="who-we-are">
+        <div class="container">
+          <div class="section-heading wide">
+            <h1 class="eyebrow">{% editable 'about-text-002' %}</h1>
+            <p>
+              {% editable 'about-text-003' %}
+            </p>
+          </div>
+
+          <div class="identity-grid">
+            <article class="identity-card large" id="identiy-what-we-do">
+              <span>{% editable 'about-text-004' %}</span>
+              <h3>{% editable 'about-text-005' %}</h3>
+              <p>
+                {% editable 'about-text-006' %}
+              </p>
+            </article>
+
+            <article class="identity-card large">
+              <span>{% editable 'about-text-007' %}</span>
+              <h3>{% editable 'about-text-008' %}</h3>
+              <p>
+                {% editable 'about-text-009' %}
+              </p>
+            </article>
+          </div>
+
+          <div class="mission-grid">
+            <article class="mission-card">
+              <span class="card-label">{% editable 'about-text-010' %}</span>
+              <h3>{% editable 'about-text-011' %}</h3>
+              <p>
+                {% editable 'about-text-012' %}
+              </p>
+            </article>
+
+            <article class="mission-card dark">
+              <span class="card-label">{% editable 'about-text-013' %}</span>
+              <h3>{% editable 'about-text-014' %}</h3>
+              <p>
+                {% editable 'about-text-015' %}
+              </p>
+            </article>
+          </div>
+
+          <div class="values-block">
+            <div class="section-heading compact">
+              <h1 class="eyebrow">{% editable 'about-text-016' %}</h1>
+              <h3>{% editable 'about-text-017' %}</h3>
+            </div>
+
+            <div class="values-grid">
+              <article class="value-card">
+                <h3>{% editable 'about-text-018' %}</h3>
+                <p>{% editable 'about-text-019' %}</p>
+              </article>
+
+              <article class="value-card">
+                <h3>{% editable 'about-text-020' %}</h3>
+                <p>{% editable 'about-text-021' %}</p>
+              </article>
+
+              <article class="value-card">
+                <h3>{% editable 'about-text-022' %}</h3>
+                <p>{% editable 'about-text-023' %}</p>
+              </article>
+
+              <article class="value-card">
+                <h3>{% editable 'about-text-024' %}</h3>
+                <p>{% editable 'about-text-025' %}</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GOVERNING BOARD -->
+      <section class="about-route" id="governing-board" data-route="governing-board" hidden>
+        <div class="container" id="gorvenment">
+          <div class="section-heading centered">
+            <h1>{% editable 'about-text-026' %}</h1>
+            <p>
+              {% editable 'about-text-027' %}
+            </p>
+          </div>
+
+          <div class="board-grid board-five" aria-label="Governing Board members">{% for person in board_members %}{% include "includes/person.html" %}{% endfor %}</div>
+          {% if advisory_members %}<div class="advisory-block"><div class="section-heading centered small-gap"><h1>{% editable 'about-text-028' %}</h1></div><div class="advisory-grid">{% for person in advisory_members %}{% include "includes/person.html" %}{% endfor %}</div></div>{% endif %}
+        </div>
+      </section>
+
+      <!-- OUR TEAM -->
+      <section class="about-route" id="our-team" data-route="our-team" hidden>
+        <div class="container">
+          <div class="section-heading centered">
+            <h2>{% editable 'about-text-029' %}</h2>
+            <p>
+              {% editable 'about-text-030' %}
+            </p>
+          </div>
+
+          <div class="team-grid" aria-label="Executive team members">{% for person in team_members %}{% include "includes/person.html" %}{% endfor %}</div>
+        </div>
+      </section>
+
+      <!-- CONTACT US -->
+      <section class="about-route" id="contact-us" data-route="contact-us" hidden>
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <!--<p class="eyebrow">Contact Us</p> -->
+            <h2>{% editable 'about-text-031' %}</h2>
+            <p>
+              {% editable 'about-text-032' %}
+            </p>
+
+            <div class="contact-list">
+              <div>
+                <span>{% editable 'about-text-033' %}</span>
+                <a href="mailto:{% editable 'contact-email' %}">{% editable 'contact-email' %}</a>
+              </div>
+
+              <div>
+                <span>{% editable 'about-text-035' %}</span>
+                <p>{% editable 'contact-address' %}</p>
+              </div>
+
+              <div>
+                <span>{% editable 'about-text-036' %}</span>
+                <p>{% editable 'about-text-037' %}</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" action="{% url 'contact-submit' %}" method="post">{% csrf_token %}
+            <h3>{% editable 'about-text-038' %}</h3>
+
+            <!-- Small notice shown after the form is submitted -->
+            <p id="contactStatus" class="contact-status" hidden></p>
+
+            <label>
+              {% editable 'about-text-039' %}
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              {% editable 'about-text-040' %}
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              {% editable 'about-text-041' %}
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary">{% editable 'about-text-042' %}</button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  {% include "includes/footer.html" %}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const year = document.getElementById("year");
+      const routeWrap = document.getElementById("aboutRouteWrap");
+      const routes = Array.from(document.querySelectorAll("[data-route]"));
+      const routeLinks = Array.from(document.querySelectorAll("[data-route-link]"));
+
+      const routeTitles = {
+        "who-we-are": "Who We Are | EA Research Group",
+        "governing-board": "Governing Board | EA Research Group",
+        "our-team": "Our Team | EA Research Group",
+        "contact-us": "Contact Us | EA Research Group"
+      };
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+      function getCurrentRoute() {
+        const hash = window.location.hash.replace("#", "");
+        return routes.some((section) => section.dataset.route === hash) ? hash : "who-we-are";
+      }
+
+      function showRoute(shouldScroll) {
+        const activeRoute = getCurrentRoute();
+
+        routes.forEach((section) => {
+          const isActive = section.dataset.route === activeRoute;
+          section.hidden = !isActive;
+          section.classList.toggle("is-active", isActive);
+        });
+
+        routeLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.dataset.routeLink === activeRoute);
+        });
+
+        document.title = routeTitles[activeRoute] || "About Us | EA Research Group";
+
+        if (shouldScroll && routeWrap) {
+          routeWrap.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      showRoute(false);
+
+      window.addEventListener("hashchange", function () {
+        showRoute(true);
+      });
+
+      // Show a thank-you / error message after the contact form is submitted.
+      // The form posts to Django, which redirects back here with
+      // ?status=sent or ?status=error in the URL.
+      const contactStatus = document.getElementById("contactStatus");
+
+      if (contactStatus) {
+        const status = new URLSearchParams(window.location.search).get("status");
+
+        if (status === "sent") {
+          contactStatus.textContent =
+            "Thank you! Your message has been sent. We will get back to you soon.";
+          contactStatus.hidden = false;
+        } else if (status === "error") {
+          contactStatus.textContent =
+            "Sorry, something went wrong. Please try again or email us directly.";
+          contactStatus.hidden = false;
+        }
+      }
+    });
+    function setHeaderOffset() {
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.offsetHeight : 78;
+
+    document.documentElement.style.setProperty(
+        "--header-offset",
+        `${headerHeight + 16}px`
+    );
+    }
+
+    window.addEventListener("load", setHeaderOffset);
+    window.addEventListener("resize", setHeaderOffset);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load content_tags %}
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div class="logo-text">
+            <img src="{% editable 'footer-image-001' %}" alt="EA Research Group Logo" class="footer-logo" />
+            <p>
+                {% editable 'footer-text-002' %}
+            </p>
+        </div>
+
+        <div>
+            <h4>{% editable 'footer-text-003' %}</h4>{% for link in footer_links %}{% include "includes/nav_link.html" %}{% endfor %}</div>
+
+        <div>
+            <h4>{% editable 'footer-text-004' %}</h4>
+            <p>{% editable 'contact-address' %}</p>
+            <p><a href="mailto:{% editable 'contact-email' %}">{% editable 'contact-email' %}</a></p>
+
+            <h4 class="follow-heading">{% editable 'footer-text-006' %}</h4>
+            <div class="social-links">{% for link in social_links %}{% include "includes/nav_link.html" %}{% endfor %}</div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>{% editable 'footer-text-007' %} <span id="year"></span> {% editable 'footer-text-008' %}</p>
+    </div>
+</footer>

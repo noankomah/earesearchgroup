@@ -1,0 +1,21 @@
+[Unit]
+Description=EA Research Group Django website
+After=network.target postgresql.service
+
+[Service]
+User=earg
+Group=www-data
+WorkingDirectory=/srv/earg
+EnvironmentFile=/etc/earg.env
+ExecStart=/srv/earg/.venv/bin/gunicorn config.wsgi:application --bind 127.0.0.1:8001 --workers 3 --timeout 60 --access-logfile - --error-logfile -
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/earg/media
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Contact Us page (views/About/contact-us.php)
+
+   The page uses Bootstrap's grid (row / columns) for the two-column
+   layout. The look of the blocks themselves comes from the site's existing
+   .contact-* styles in assets/css/about.css, so this file only:
+
+     1. glues the Bootstrap grid to the proportions the page had originally
+        - desktop: 0.9fr / 1fr columns with a 42px gap
+        - 1024px and below: a single stacked column
+     2. undoes the few Bootstrap Reboot defaults that differ from the
+        original page (which loaded about.css only, without Bootstrap)
+        - headings were browser-default bold, Bootstrap makes them 500
+        - about.css .container has no padding, Bootstrap adds ~12px
+   ========================================================================== */
+
+/* Bootstrap Reboot resets headings to font-weight 500. The original page
+   used the browser default (bold), so restore it for the contact headings. */
+.contact-info h2,
+.contact-form h3 {
+  font-weight: 700;
+}
+
+/* about.css gives .container no horizontal padding; remove the ~12px inset
+   Bootstrap adds so the content lines up with the rest of the site. */
+.about-route .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Clear the shared main pull-up and override the mobile 14px rule. */
+main.contact-page {
+  margin-top: 0;
+}
+
+.contact-page > .about-route {
+  padding-block: clamp(35px, 5vw, 64px) !important;
+}
+
+/* Default gutter (used while the columns are stacked). */
+.contact-layout {
+  --bs-gutter-x: 24px;
+  --bs-gutter-y: 24px;
+}
+
+/* Desktop: the original 0.9fr / 1fr split and 42px gap. */
+@media (min-width: 1025px) {
+  .contact-layout {
+    --bs-gutter-x: 42px;
+    --bs-gutter-y: 0;
+  }
+
+  .contact-layout > .contact-info {
+    flex: 0 0 auto;
+    width: 47.37%;
+  }
+
+  .contact-layout > .contact-form-col {
+    flex: 0 0 auto;
+    width: 52.63%;
+  }
+}
+
+/* 1024px and below: stack the columns, like the original contact page. */
+@media (max-width: 1024px) {
+  .contact-layout > [class*="col-"] {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}

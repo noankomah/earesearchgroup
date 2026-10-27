@@ -1,0 +1,115 @@
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% editable 'survey-text-001' %}</title>
+    <meta name="description" content="{% editable 'survey-meta-description' %}" />
+
+    <link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
+    <link rel="stylesheet" href="/static/assets/css/survey.css?v=4">
+
+    <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+</head>
+
+<script>
+    // Opens/closes the mobile navigation dropdowns (same behaviour as other pages).
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".nav-dropdown");
+
+        dropdowns.forEach(function (dropdown) {
+            const parent = dropdown.querySelector(".nav-parent");
+
+            if (!parent) return;
+
+            parent.addEventListener("click", function (event) {
+                if (window.innerWidth > 1024) return;
+
+                event.preventDefault();
+
+                dropdowns.forEach(function (otherDropdown) {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove("is-open");
+                    }
+                });
+
+                dropdown.classList.toggle("is-open");
+            });
+        });
+    });
+</script>
+
+<body>
+    {% include "includes/navbar.html" %}
+
+    <main class="survey-main">
+        <div class="container">
+
+            <header class="survey-header">
+                <p class="survey-eyebrow">{{ meta.subtitle }}</p>
+                <h1>{{ meta.title }}</h1>
+                <p class="survey-intro">{{ meta.description }}</p>
+            </header>
+
+            <!-- Thank-you panel, revealed by JavaScript after a successful submit. -->
+            <section id="surveyThankYou" class="survey-thankyou" hidden>
+                <h2>{% editable 'survey-text-002' %}</h2>
+                <p>{% editable 'survey-text-003' %}</p>
+            </section>
+
+            <!-- Already-submitted notice (soft duplicate protection). -->
+            {% if alreadySubmitted %}
+                <section class="survey-notice">
+                    <p>{% editable 'survey-text-004' %}</p>
+                </section>
+            {% endif %}
+
+            <form id="surveyForm" class="survey-form" novalidate {% if alreadySubmitted %}hidden{% endif %}>
+
+                <!-- CSRF token and honeypot field, checked by api/survey.php. -->
+                {% csrf_token %}{% editable 'survey-text-005' %}
+                <div class="survey-honeypot" aria-hidden="true">
+                    <label>{% editable 'survey-text-006' %}<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                </div>
+
+                <p class="survey-required-note"><span class="survey-req">{% editable 'survey-text-007' %}</span> {% editable 'survey-text-008' %}</p>
+
+                <div id="surveyGeneralError" class="survey-alert" hidden></div>
+
+{% for q in questions %}
+<fieldset class="survey-question" data-question="{{ q.key }}">
+<legend class="survey-legend">{{ q.number }}{% editable 'survey-text-009' %} {{ q.title }}{% if q.required %}<span class="survey-req" aria-hidden="true">{% editable 'survey-text-010' %}</span>{% endif %}</legend>
+{% if q.help %}<p class="survey-help">{{ q.help }}</p>{% endif %}
+{% if q.type == 'radio' or q.type == 'checkbox' %}<div class="survey-options">{% for option in q.options %}
+<div class="form-check"><input class="form-check-input" type="{{ q.type }}" name="{{ q.key }}{% if q.type == 'checkbox' %}[]{% endif %}" id="{{ q.key }}-{{ forloop.counter0 }}" value="{{ option }}"><label class="form-check-label" for="{{ q.key }}-{{ forloop.counter0 }}">{{ option }}</label></div>
+{% endfor %}
+{% if q.other and q.type == 'checkbox' %}<div class="form-check"><input class="form-check-input" type="checkbox" name="{{ q.key }}[]" id="{{ q.key }}-other" value="Other" data-other-toggle="{{ q.key }}"><label class="form-check-label" for="{{ q.key }}-other">{{ q.other_label }}</label></div><input type="text" class="form-control survey-other-text" name="{{ q.key }}_other" data-other-input="{{ q.key }}" maxlength="{{ q.other_maxlength }}" placeholder="Please specify" hidden>{% endif %}
+</div>
+{% elif q.type == 'text' %}<input type="text" class="form-control" name="{{ q.key }}" maxlength="{{ q.maxlength }}" aria-label="{{ q.title }}">
+{% elif q.type == 'textarea' %}<textarea class="form-control" name="{{ q.key }}" rows="4" maxlength="{{ q.maxlength }}" aria-label="{{ q.title }}"></textarea>
+{% elif q.type == 'scale' %}<div class="survey-scale"><span class="survey-scale-label">{{ q.min_label }}</span><div class="survey-scale-row">{% for value in q.scale_values %}<div class="survey-scale-item"><input class="form-check-input" type="radio" name="{{ q.key }}" id="{{ q.key }}-{{ value }}" value="{{ value }}"><label for="{{ q.key }}-{{ value }}">{{ value }}</label></div>{% endfor %}</div><span class="survey-scale-label">{{ q.max_label }}</span></div>{% endif %}
+<p class="survey-error" data-error-for="{{ q.key }}" hidden></p>
+</fieldset>{% endfor %}
+                <div class="survey-actions">
+                    <button type="submit" class="btn btn-primary" id="surveySubmit">{% editable 'survey-text-011' %}</button>
+                    <span class="survey-status" id="surveyStatus" aria-live="polite"></span>
+                </div>
+            </form>
+
+            <noscript>
+                <p class="survey-notice">{% editable 'survey-text-012' %}</p>
+            </noscript>
+        </div>
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    <script src="/static/assets/js/survey.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

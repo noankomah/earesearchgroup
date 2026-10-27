@@ -1,0 +1,15 @@
+<div class="earg-rich-editor" data-editor>
+  <div class="earg-editor-tools" role="toolbar" aria-label="Text formatting">
+    <button type="button" data-command="bold"><strong>Bold</strong></button>
+    <button type="button" data-command="italic"><em>Italic</em></button>
+    <button type="button" data-command="formatBlock" data-value="h2">Heading</button>
+    <button type="button" data-command="formatBlock" data-value="p">Paragraph</button>
+    <button type="button" data-command="insertUnorderedList">Bullet list</button>
+    <button type="button" data-command="insertOrderedList">Numbered list</button>
+    <button type="button" data-command="createLink">Link</button>
+    <button type="button" data-command="unlink">Remove link</button>
+  </div>
+  {% include "django/forms/widgets/textarea.html" %}
+  <div class="earg-editor-surface" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Formatted content" hidden></div>
+  <small>Use the toolbar to format text. Pasted text is inserted without formatting.</small>
+</div>

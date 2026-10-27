@@ -1,0 +1,9 @@
+{% load content_tags %}
+<article class="person-card">
+  <div class="person-photo">
+    {% if person.photo or person.photo_path %}<img src="{% picture person.photo person.photo_path %}"{% if person.photo_id %} id="{{ person.photo_id }}"{% endif %} alt="{{ person.name }}">{% endif %}
+  </div>
+  <h3>{% if person.profile_link %}<a href="{{ person.profile_link|public_url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</h3>
+  <p>{{ person.role }}</p>
+  {% if person.biography %}<p>{{ person.biography }}</p>{% endif %}
+</article>
