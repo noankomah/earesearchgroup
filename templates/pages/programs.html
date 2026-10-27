@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="/static/assets/css/about.css" />
     <link rel="stylesheet" href="/static/assets/css/publications.css" />
     <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
-  </head>
+    {% include "includes/seo.html" %}
+</head>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const dropdownButtons = document.querySelectorAll(".nav-parent");

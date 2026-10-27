@@ -329,7 +329,7 @@ class SiteTests(TestCase):
         self.assertIn("q1,q10,q12", export.content.decode())
         self.assertIn("'=formula", export.content.decode())
         self.assertContains(self.client.get("/robots.txt"), "Disallow: /team/")
-        self.assertContains(self.client.get("/sitemap.xml"), "http://testserver/about.php")
+        self.assertContains(self.client.get("/sitemap.xml"), "http://testserver/views/About/who-we-are.php")
 
     def test_footer_corrections_on_every_public_page(self):
         models.FounderStory.objects.create(founder_name="Founder", is_published=True)

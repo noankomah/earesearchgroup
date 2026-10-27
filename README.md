@@ -83,6 +83,8 @@ Existing public `.php` page and API URLs remain available, including publication
 
 ## OVH deployment
 
+Use [the complete Ubuntu 24.04 commands](deploy/OVH_DEPLOY.md) for the first deployment and later updates. For preserving old URLs and Search Console, see [the indexing guide](deploy/INDEXING.md).
+
 The files in `deploy/` target a Linux OVH VPS or dedicated server with Python 3.12, PostgreSQL, Nginx and systemd. Adapt paths and domain names to your server. No deployment or domain change has been performed.
 
 1. Create an `earg` service user, a PostgreSQL database and database user. Place this repository directly at `/srv/earg`, so that `/srv/earg/manage.py` exists. Create its virtual environment and install `requirements.lock`.

@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{% editable 'about-text-001' %}</title>
+  <title>{% if section_title %}{{ section_title }} | EA Research Group{% else %}{% editable 'about-text-001' %}{% endif %}</title>
 
   <meta name="description" content="{% editable 'about-meta-description' %}" />
 
   <link rel="stylesheet" href="/static/assets/css/about.css?v=4">
 
   <script defer src="/static/assets/vendor/alpinejs/alpine.min.js"></script>
+  {% include "includes/seo.html" %}
 </head>
 
 <script>
@@ -78,7 +79,8 @@
     <div class="about-route-wrap" id="aboutRouteWrap">
 
       <!-- WHO WE ARE -->
-      <section class="about-route is-active" id="who-we-are" data-route="who-we-are">
+      {% if not standalone_section or standalone_section == 'who-we-are' %}
+      <section class="about-route{% if initial_route == 'who-we-are' %} is-active{% endif %}" id="who-we-are" data-route="who-we-are"{% if initial_route != 'who-we-are' %} hidden{% endif %}>
         <div class="container">
           <div class="section-heading wide">
             <h1 class="eyebrow">{% editable 'about-text-002' %}</h1>
@@ -153,9 +155,11 @@
           </div>
         </div>
       </section>
+      {% endif %}
 
       <!-- GOVERNING BOARD -->
-      <section class="about-route" id="governing-board" data-route="governing-board" hidden>
+      {% if not standalone_section or standalone_section == 'governing-board' %}
+      <section class="about-route{% if initial_route == 'governing-board' %} is-active{% endif %}" id="governing-board" data-route="governing-board"{% if initial_route != 'governing-board' %} hidden{% endif %}>
         <div class="container" id="gorvenment">
           <div class="section-heading centered">
             <h1>{% editable 'about-text-026' %}</h1>
@@ -168,9 +172,11 @@
           {% if advisory_members %}<div class="advisory-block"><div class="section-heading centered small-gap"><h1>{% editable 'about-text-028' %}</h1></div><div class="advisory-grid">{% for person in advisory_members %}{% include "includes/person.html" %}{% endfor %}</div></div>{% endif %}
         </div>
       </section>
+      {% endif %}
 
       <!-- OUR TEAM -->
-      <section class="about-route" id="our-team" data-route="our-team" hidden>
+      {% if not standalone_section or standalone_section == 'our-team' %}
+      <section class="about-route{% if initial_route == 'our-team' %} is-active{% endif %}" id="our-team" data-route="our-team"{% if initial_route != 'our-team' %} hidden{% endif %}>
         <div class="container">
           <div class="section-heading centered">
             <h2>{% editable 'about-text-029' %}</h2>
@@ -182,9 +188,11 @@
           <div class="team-grid" aria-label="Executive team members">{% for person in team_members %}{% include "includes/person.html" %}{% endfor %}</div>
         </div>
       </section>
+      {% endif %}
 
       <!-- CONTACT US -->
-      <section class="about-route" id="contact-us" data-route="contact-us" hidden>
+      {% if not standalone_section or standalone_section == 'contact-us' %}
+      <section class="about-route{% if initial_route == 'contact-us' %} is-active{% endif %}" id="contact-us" data-route="contact-us"{% if initial_route != 'contact-us' %} hidden{% endif %}>
         <div class="container contact-grid">
           <div class="contact-info">
             <!--<p class="eyebrow">Contact Us</p> -->
@@ -236,6 +244,7 @@
           </form>
         </div>
       </section>
+      {% endif %}
 
     </div>
   </main>
@@ -263,7 +272,7 @@
 
       function getCurrentRoute() {
         const hash = window.location.hash.replace("#", "");
-        return routes.some((section) => section.dataset.route === hash) ? hash : "who-we-are";
+        return routes.some((section) => section.dataset.route === hash) ? hash : "{{ initial_route|escapejs }}";
       }
 
       function showRoute(shouldScroll) {

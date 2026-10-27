@@ -19,6 +19,7 @@ from .content import image_url, public_url
 from .forms import ContactForm, NewsletterForm, PublicationForm, OpportunityForm, TeamMemberForm, ContentBlockForm, HeroSlideForm, EventForm
 from .limits import allow_request
 from .search import matching_items
+from .seo import ABOUT_PATHS, ABOUT_SECTIONS, FOUNDER_PATH
 
 class TeamLoginView(LoginView):
     template_name = "team/login.html"
@@ -31,14 +32,22 @@ class TeamLoginView(LoginView):
 
 @require_GET
 @ensure_csrf_cookie
-def page(request, name="index"):
+def page(request, name="index", section=None):
     context = {}
     if name == "about":
         people = models.TeamMember.objects.filter(is_active=True)
         context = {"board_members": people.filter(section="board"), "team_members": people.filter(section="team"),
-                   "advisory_members": people.filter(section="advisory")}
+                   "advisory_members": people.filter(section="advisory"),
+                   "standalone_section": section, "initial_route": section or "who-we-are",
+                   "section_title": ABOUT_SECTIONS.get(section, "")}
     if name == "events":
         context["events"] = models.Event.objects.filter(is_published=True)
+        context["noindex"] = not context["events"].exists()
+    if name == "programs":
+        # This retained route is still the old Publications placeholder.
+        context["noindex"] = True
+    if name == "publications":
+        context["noindex"] = not (models.Publication.objects.filter(is_published=True).exists() or models.Opportunity.objects.filter(is_published=True).exists())
     return render(request, f"pages/{name}.html", context)
 
 @require_GET
@@ -175,11 +184,23 @@ def robots(request):
 
 @require_GET
 def sitemap(request):
-    paths = ["/", "/about.php", "/programs.php", "/publications.php", "/events.php"]
+    from urllib.parse import urlencode
+    paths = ["/", ABOUT_PATHS["who-we-are"], ABOUT_PATHS["contact-us"]]
+    if models.TeamMember.objects.filter(section="board", is_active=True).exists():
+        paths.append(ABOUT_PATHS["governing-board"])
+    if models.TeamMember.objects.filter(section="team", is_active=True).exists():
+        paths.append(ABOUT_PATHS["our-team"])
     if models.FounderStory.objects.filter(is_published=True).exists():
-        paths.append("/founder-story.php")
-    paths += [f"/publications/{slug}/" for slug in models.Publication.objects.filter(is_published=True).values_list("slug", flat=True)]
-    paths += [f"/opportunities/{slug}/" for slug in models.Opportunity.objects.filter(is_published=True).values_list("slug", flat=True)]
+        paths.append(FOUNDER_PATH)
+    publications = models.Publication.objects.filter(is_published=True)
+    opportunities = models.Opportunity.objects.filter(is_published=True)
+    if publications.exists() or opportunities.exists():
+        paths.append("/publications.php")
+    if models.Event.objects.filter(is_published=True).exists():
+        paths.append("/events.php")
+    # List one address per page, using the URLs existing search results used.
+    paths += ["/publication.php?" + urlencode({"slug": slug}) for slug in publications.values_list("slug", flat=True)]
+    paths += ["/opportunity.php?" + urlencode({"slug": slug}) for slug in opportunities.values_list("slug", flat=True)]
     return render(request, "sitemap.xml", {"locations": [request.build_absolute_uri(path) for path in paths]}, content_type="application/xml")
 
 def type_config(kind):
